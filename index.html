@@ -7,10 +7,42 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.5;
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 200px;
+            padding-right: 20px;
+            background-color: #f2f2f2;
+        }
+        
+        .profile-image {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            object-fit: cover;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        
+        .contact-info p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .section {
+            flex: 1;
+            padding-left: 20px;
         }
         
         h1 {
             color: #333;
+            margin-top: 0;
         }
         
         h2 {
@@ -19,10 +51,6 @@
         
         p {
             color: #999;
-        }
-        
-        .section {
-            margin-bottom: 40px;
         }
         
         .section-title {
@@ -35,10 +63,6 @@
             margin-left: 20px;
         }
         
-        .contact-info {
-            margin-top: 20px;
-        }
-        
         .contact-info a {
             color: #0366d6;
             text-decoration: none;
@@ -46,45 +70,40 @@
     </style>
 </head>
 <body>
-    <h1>Michiel Ghesquiere</h1>
-    <div class="contact-info">
-        <p>Sint-Katelijne-Waver, 2860, Belgium<br>
-        +32484468785<br>
-        <a href="mailto:Michiel.Ghesquiere@gmail.com">Michiel.Ghesquiere@gmail.com</a><br>
-        <a href="https://www.linkedin.com/in/michiel-ghesquiere-397aa51a6/">My LinkedIn profile</a></p>
+    <div class="sidebar">
+        <img class="profile-image" src="Profile_picture.jpg" alt="Profile Image">
+        <div class="contact-info">
+            <p><strong>Sint-Katelijne-Waver, 2860, Belgium</strong></p>
+            <p><strong>+32484468785</strong></p>
+            <p><a href="mailto:Michiel.Ghesquiere@gmail.com">Michiel.Ghesquiere@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/michiel-ghesquiere-397aa51a6/">LinkedIn</a></p>
+        </div>
+        <p><strong>Bioscience Engineer - Artificial Intelligence</strong></p>
     </div>
 
     <div class="section">
-        <h2 class="section-title">Profile</h2>
-        <p>As a highly motivated individual with a strong academic background in artificial intelligence and bioscience engineering, I am eager to contribute my expertise to advancing medical diagnostics and improving patient outcomes. My interdisciplinary education and research experiences have equipped me with the skills to develop innovative solutions for life sciences and healthcare challenges. Additionally, my involvement in various student organizations and volunteer activities has honed my leadership, communication, and problem-solving abilities, making me a valuable asset to interdisciplinary teams in academia and research.</p>
-    </div>
+        <h1>Michiel Ghesquiere</h1>
+        
+        <div class="section">
+            <h2 class="section-title">Profile</h2>
+            <p>As a highly motivated individual with a strong academic background in artificial intelligence and bioscience engineering, I am eager to contribute my expertise to advancing medical diagnostics and improving patient outcomes. My interdisciplinary education and research experiences have equipped me with the skills to develop innovative solutions for life sciences and healthcare challenges.</p>
+        </div>
 
-    <div class="section">
-        <h2 class="section-title">Skill Highlights</h2>
-        <ul class="section-content">
-            <li>Artificial Intelligence and Machine Learning</li>
-            <li>Data analysis and interpretation</li>
-            <li>Biomedical research and applications</li>
-            <li>Interdisciplinary problem-solving</li>
-            <li>Programming (Python, Matlab, Java)</li>
-            <li>Project management and teamwork</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="section-content">
-            <p><strong>Master of Science: Artificial Intelligence, KU Leuven</strong><br>
-            September 2022 - June 2023<br>
-            Thesis: Developing an automatic seizure detection algorithm to facilitate treatment of patients with epilepsy.</p>
-            
-            <p><strong>Master in Bioscience Engineering: Human Health Engineering, KU Leuven</strong><br>
-            September 2020 - June 2022<br>
-            Thesis: Developing an activity recognition algorithm using object detection for animal welfare.</p>
-            
-            <p><strong>Bachelor in Bioscience Engineering, KU Leuven</strong><br>
-            September 2017 - June 2020<br>
-            Undergraduate Thesis: researched bacterial protein aggregates, their induction, localization, and impact on cellular function (Selectedas a finalist for the Student Research Awards).</p>
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <p><strong>Master of Science: Artificial Intelligence, KU Leuven</strong><br>
+                September 2022 - June 2023<br>
+                Thesis: Developing an automatic seizure detection algorithm to facilitate treatment of patients with epilepsy.</p>
+                
+                <p><strong>Master in Bioscience Engineering: Human Health Engineering, KU Leuven</strong><br>
+                September 2020 - June 2022<br>
+                Thesis: Developing an activity recognition algorithm using object detection for animal welfare.</p>
+                
+                <p><strong>Bachelor in Bioscience Engineering, KU Leuven</strong><br>
+                September 2017 - June 2020<br>
+                Undergraduate Thesis: researched bacterial protein aggregates, their induction, localization, and impact on cellular function (Selected as a finalist for the Student Research Awards).</p>
+            </div>
         </div>
     </div>
 </body>
