@@ -9,8 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-## Profile
-
 ## Skill Highlights
 - Artificial Intelligence and Machine Learning
 - Data analysis and interpretation
