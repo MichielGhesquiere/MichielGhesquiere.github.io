@@ -7,9 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Michiel,
 
-I just started my interdisciplinary PhD with the Research Group Ophthalmology at KU Leuven, together with the Biomedical Signal Processing lab at STADIUS. I am working on Hyperspectral Imaging of the human Retina, looking for biomarkers for Alzheimer's Disease.
+
+Hi there! I am Michiel,
+
+I recently started an interdisciplinary PhD with the Research Group Ophthalmology at KU Leuven and the Biomedical Signal Processing lab at STADIUS. My research focuses on Hyperspectral Imaging of the human retina, aiming to identify biomarkers for Alzheimer’s Disease.
+
 
 ## Education
 
