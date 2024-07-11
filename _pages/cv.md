@@ -9,11 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-## Skill Highlights
-- Artificial Intelligence and Machine Learning
-- Data analysis and interpretation
-- Biomedical research and applications
-
 ## Education
 - **Master of Science: Artificial Intelligence**, KU Leuven
   - **September 2022 — September 2023**
