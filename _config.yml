@@ -21,11 +21,11 @@ repository               : "MichielGhesquiere/MichielGhesquiere.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profielfoto_Michiel.jpg"
   name             : "Michiel Ghesquiere"
   pronouns         : # example: "she/her"  
   bio              : "PhD Researcher at the Research Group Ophthalmology KU Leuven"
-  location         : "Earth"
+  location         : "Leuven, Belgium"
   employer         : "KU Leuven"
   uri              : # URL
   email            : "michiel.ghesquiere@kuleuven.be" 

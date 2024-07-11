@@ -9,56 +9,33 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Profile
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Skill Highlights
+- Artificial Intelligence and Machine Learning
+- Data analysis and interpretation
+- Biomedical research and applications
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Education
+- **Master of Science: Artificial Intelligence**, KU Leuven
+  - **September 2022 — September 2023**
+  - Thesis: Developing an automatic seizure detection algorithm to facilitate the treatment of patients with epilepsy
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+- **Master in Bioscience Engineering: Human Health Engineering**, KU Leuven
+  - **September 2020 — June 2022**
+  - Thesis: Developing an activity recognition algorithm using object detection for animal welfare
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- **Bachelor in Bioscience Engineering**, KU Leuven
+  - **September 2017 — June 2020**
+  - Undergraduate Thesis: Researched bacterial protein aggregates, their induction, localization, and impact on cellular function
+
+## Publications
+- Willems, S., Ghesquiere, M., Liu, D., Mounir, M., & Norton, T. (2022). ‘Development of a camera-based hybrid approach for the early detection of poultry red mite-related behaviors in individual laying hens’. Department of Biosystems, KU Leuven, Belgium
+
+## Volunteering
+- **Manager of the Faculty Bar**, LBK, Leuven
+  - Managing a team of 15+ people, communicating with external organizations, and solving any problems pertaining to the bar's function
+
+- **Leader & Board Member**, KLJ Hagelstein
+  - Animator and active member of the KLJ youth movement organization
+
