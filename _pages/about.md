@@ -9,9 +9,14 @@ redirect_from:
 
 
 
-Hi there! I am Michiel,
+Hi there! I am Michiel.
 
-I recently started an interdisciplinary PhD with the Research Group Ophthalmology at KU Leuven and the Biomedical Signal Processing lab at STADIUS. My research focuses on Hyperspectral Imaging of the human retina, aiming to identify biomarkers for Alzheimer’s Disease.
+I am an interdisciplinary researcher combining expertise in artificial intelligence and human health engineering. Currently I am pursuing a PhD within the Research Group Ophthalmology and the Biomedical Signal Processing lab (STADIUS) at KU Leuven. My work explores hyperspectral retinal imaging and deep learning as tools to detect neurodegenerative diseases such as glaucoma and Alzheimer’s disease.
+
+### Research Experience
+
+- **Jan 2024 – Present:** Interdisciplinary research between the Research Group Ophthalmology and Biomedical Signal Processing (BioMed, ESAT) using retinal imaging and AI to detect neurodegenerative diseases.
+- **Aug – Sep 2023:** Research internship at Somnilog, Ghent studying the bi-directional link between sleep and dementia.
 
 
 ## Education
@@ -21,5 +26,8 @@ I recently started an interdisciplinary PhD with the Research Group Ophthalmolog
 
 - **Master in Bioscience Engineering: Human Health Engineering** - KU Leuven, September 2020 — June 2022
   - Thesis: Developing an activity recognition algorithm using object detection for animal welfare
+
+- **Bachelor in Bioscience Engineering** - KU Leuven, September 2017 — June 2020
+  - Undergraduate Thesis: Researched bacterial protein aggregates, their induction, localization, and impact on cellular function
 
 

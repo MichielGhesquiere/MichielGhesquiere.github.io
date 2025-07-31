@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Michiel Ghesquiere"
 title_separator          : "-"
 name                     : &name "Michiel Ghesquiere"
-description              : &description "PhD Researcher at the Research Group Ophthalmology KU Leuven"
+description              : &description "PhD researcher developing AI methods for retinal imaging and neurodegenerative disease detection"
 url                      : https://MichielGhesquiere.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "MichielGhesquiere/MichielGhesquiere.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "profielfoto_Michiel.jpg"
   name             : "Michiel Ghesquiere"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Researcher at the Research Group Ophthalmology KU Leuven"
+  bio              : "PhD researcher using AI and hyperspectral retinal imaging to study neurodegenerative diseases"
   location         : "Leuven, Belgium"
   employer         : "KU Leuven"
   uri              : # URL
@@ -43,7 +43,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "MichielGhesquire"
+  github           : "MichielGhesquiere"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 

@@ -9,6 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+## Profile
+Academic researcher in life sciences with a strong background in artificial intelligence and human health engineering. My work focuses on developing computational methods for medical imaging and diagnostics, with a particular emphasis on neurodegenerative diseases.
+
+## Research Experience
+- **Jan 2024 – Present:** Interdisciplinary research between the Research Group Ophthalmology and Biomedical Signal Processing (BioMed, ESAT) using retinal imaging and AI to detect neurodegenerative diseases.
+- **Aug – Sep 2023:** Research internship at Somnilog, Ghent researching the bi-directional link between sleep and dementia.
+
 ## Education
 - **Master of Science: Artificial Intelligence**, KU Leuven
   - **September 2022 — September 2023**
@@ -23,7 +30,12 @@ redirect_from:
   - Undergraduate Thesis: Researched bacterial protein aggregates, their induction, localization, and impact on cellular function
 
 ## Publications
-- Willems, S., Ghesquiere, M., Liu, D., Mounir, M., & Norton, T. (2022). ‘Development of a camera-based hybrid approach for the early detection of poultry red mite-related behaviors in individual laying hens’. Department of Biosystems, KU Leuven, Belgium
+- M. Ghesquiere et al., "Seeing the light: Hyperspectral retinal imaging as a surrogate marker for early stage Alzheimer’s disease," <i>Acta Ophthalmologica</i>, vol. 103, no. S284, 2025, doi: 10.1111/aos.17369.
+- Willems, S., Ghesquiere, M., Liu, D., Mounir, M., & Norton, T. (2022). 'Development of a camera-based hybrid approach for the early detection of poultry red mite-related behaviors in individual laying hens'. Department of Biosystems, KU Leuven, Belgium
+
+## Conferences
+- European Glaucoma Society (EGS) 16th congress – 1-4 June, 2024
+- European Association for Vision and Eye Research (EVER) congress – 3-5 November, 2024
 
 ## Volunteering
 - **Manager of the Faculty Bar**, LBK, Leuven
