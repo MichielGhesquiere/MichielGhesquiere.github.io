@@ -11,13 +11,13 @@ Hi there! I am Michiel. 👋
 
 I am a Bioscience Engineer with an additional Master's in Artificial Intelligence, combining expertise in life sciences with computational skills. Currently I am doing interdisciplinary research within the Research Group Ophthalmology and the Biomedical Signal Processing lab (STADIUS) at KU Leuven. 
 
-My work sits at the fascinating intersection of **AI and healthcare** 🏥🤖, where I apply cutting-edge machine learning techniques to solve real-world medical challenges. I have applied AI across diverse domains, from medical imaging in ophthalmology to biosignal and activity recognition, with a focus on improving disease detection, monitoring, and decision-making. 
+My work sits at the fascinating intersection of **AI and healthcare** 🏥🤖, where I apply machine learning techniques to solve real-world medical challenges. I have applied AI across diverse domains, from medical imaging in ophthalmology to biosignal and activity recognition, with a focus on improving disease detection, monitoring, and decision-making. 
 
 ## 🔬 What I Do
 
 My interdisciplinary research integrates deep learning, image analysis, and signal processing, with hands-on experience in:
 - **Foundation model fine-tuning** for medical applications
-- **Multimodal data fusion** combining images, signals, and clinical data  
+- **Multimodal data fusion** combining traditional fundus images, with depth resolved and hyperspectral images 
 - **Custom loss function development** for topology preservation
 - **Domain adaptation** across different imaging devices and populations
 
