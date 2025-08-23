@@ -11,7 +11,7 @@ author_profile: true
 **Key Innovation:** Novel texture biomarkers in hyperspectral retinal imaging, multimodal classifiaction achieving AUC 0.84
 
 - Developed end-to-end pipeline from image quality assessment to multimodal classification
-- Created novel texture feature extraction methods for early disease detection
+- Created novel hyperspecrtal imaging texture biomarker for early disease detection
 - Assessed repeatability and reproducibility of imaging biomarkers
 
 [Abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.17369) *(Preliminary results - full paper coming soon!)*
