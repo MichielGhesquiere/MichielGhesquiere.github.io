@@ -21,6 +21,11 @@ author_profile: true
 ### 👁️ Vision Foundation Models for Glaucoma Classification
 **Key Innovation:** Addressing domain shift across imaging devices and demographics
 
+<div style="text-align: center;">
+  <img src="/images/umap_embeddings_20250626_190413.png" alt="UMAP embeddings showing domain shift between datasets" style="max-width: 100%; height: auto; margin: 20px 0;">
+  <p><em>UMAP embeddings of image features by dataset and classification label (Normal vs Glaucoma), showing domain shift between different imaging devices/clinical settings/demographics</em></p>
+</div>
+
 - Leveraged Vision Foundation Models (VFM) pre-trained with self-supervised learning
 - Implemented multi-source domain fine-tuning techniques
 - Applied domain adaptation to handle demographic and device variations
