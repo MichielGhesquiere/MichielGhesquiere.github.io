@@ -41,12 +41,13 @@ author_profile: true
 - Achieved early detection of welfare-compromising behaviors
 - Deployed system for continuous monitoring in agricultural settings
 
-[Thesis](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9993097125501488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere) | [Publication](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9994277629301488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
+**Resources:**
+- [Thesis](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9993097125501488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
+- [Publication](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9994277629301488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
 
 ---
 
 ### 🧠 Multimodal Seizure Detection
-**Technologies:** Python, Signal Processing, EEG/EMG/ACC  
 **Key Innovation:** Fusion of multiple wearable sensor modalities for improved detection
 
 <div style="text-align: center;">
