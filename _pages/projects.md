@@ -28,7 +28,7 @@ author_profile: true
 
 [View Code](https://github.com/MichielGhesquiere/glaucoma)
 
-### 🧪 Camera-based Activity Recognition for Animal Welfare
+### 🐔 Camera-based Activity Recognition for Animal Welfare
 **Key Innovation:** Hybrid approach combining object detection with motion analysis
 
 <div style="text-align: center;">
