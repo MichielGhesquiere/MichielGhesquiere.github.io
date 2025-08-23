@@ -1,7 +1,5 @@
-# Template from Academic Pages
+# Used existing template from Academic Pages
 
 ![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 Academic Pages is a Github Pages template for academic websites.
-
-# Work in progress...
