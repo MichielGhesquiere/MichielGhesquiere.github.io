@@ -44,7 +44,6 @@ author_profile: true
 - Developed real-time animal behavior monitoring system
 - Combined YOLOv8 object detection with Gaussian Mixture Model motion detection
 - Achieved early detection of welfare-compromising behaviors
-- Deployed system for continuous monitoring in agricultural settings
 
 **Resources:**
 - [Thesis](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9993097125501488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
@@ -60,10 +59,8 @@ author_profile: true
   <p><em></em></p>
 </div>
 
-- Designed multimodal deep learning architecture for seizure detection
-- Preprocessed and synchronized EEG, EMG, and accelerometer data
-- Implemented real-time detection algorithms for wearable devices
-- Achieved high sensitivity while maintaining low false positive rates
+- Modality specific feature extraction + SVM classification
+- By combining multiple modalities, we could improve sensitivity and reduce false alarm rate
 
 <div style="text-align: center;">
   <img src="/images/multimodal_seizures.png" alt="Multimodal signals during seizure events" style="max-width: 100%; height: auto; margin: 20px 0;">
