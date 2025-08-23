@@ -38,7 +38,7 @@ author_profile: true
 
 <div style="text-align: center;">
   <img src="/images/overview-algorithm-movement-detection.png" alt="Overview of the hybrid algorithm for movement detection" style="max-width: 100%; height: auto; margin: 20px 0;">
-  <p><em>Overview of the developed hybrid algorithm combining YOLOv8 object detection with motion analysis</em></p>
+  <p><em></em></p>
 </div>
 
 - Developed real-time animal behavior monitoring system
@@ -57,7 +57,7 @@ author_profile: true
 
 <div style="text-align: center;">
   <img src="/images/schematic-SD-wearables.png" alt="Schematic setup of wearable sensors for seizure detection" style="max-width: 100%; height: auto; margin: 20px 0;">
-  <p><em>Schematic setup of multimodal wearable sensor system for seizure detection</em></p>
+  <p><em></em></p>
 </div>
 
 - Designed multimodal deep learning architecture for seizure detection
@@ -67,7 +67,7 @@ author_profile: true
 
 <div style="text-align: center;">
   <img src="/images/multimodal_seizures.png" alt="Multimodal signals during seizure events" style="max-width: 100%; height: auto; margin: 20px 0;">
-  <p><em>Example of synchronized EEG, EMG, and accelerometer signals during seizure events</em></p>
+  <p><em></em></p>
 </div>
 
 [Thesis](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9993576486601488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
