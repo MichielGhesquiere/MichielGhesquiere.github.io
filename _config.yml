@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Michiel Ghesquiere"
 title_separator          : "-"
 name                     : &name "Michiel Ghesquiere"
-description              : &description "PhD researcher developing AI methods for retinal imaging and neurodegenerative disease detection"
+description              : &description "Bioscience engineer with a passion for AI, signal processing and computer vision"
 url                      : https://MichielGhesquiere.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "MichielGhesquiere/MichielGhesquiere.github.io"
@@ -24,11 +24,11 @@ author:
   avatar           : "profielfoto_Michiel.jpg"
   name             : "Michiel Ghesquiere"
   pronouns         : # example: "she/her"  
-  bio              : "PhD researcher using AI and hyperspectral retinal imaging to study neurodegenerative diseases"
+  bio              : "Bioscience engineer with a passion for AI, signal processing and computer vision"
   location         : "Leuven, Belgium"
   employer         : "KU Leuven"
   uri              : # URL
-  email            : "michiel.ghesquiere@kuleuven.be" 
+  email            : "michiel.ghesquiere@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
