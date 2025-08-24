@@ -1,5 +1,9 @@
-# Used existing template from Academic Pages
+# Michiel Ghesquiere - Personal Website
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+This repository contains the source code for my personal website, showcasing my research and projects.
 
-Academic Pages is a Github Pages template for academic websites.
+## 🌐 Live Website
+Visit the website at: **https://michielghesquiere.github.io/**
+
+## 📋 About
+This website is built using Jekyll and GitHub Pages, forked from the [Academic Pages template](https://github.com/academicpages/academicpages.github.io)
