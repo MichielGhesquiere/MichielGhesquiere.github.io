@@ -38,15 +38,24 @@ author_profile: true
 
 <div style="text-align: center;">
   <img src="/images/overview-algorithm-movement-detection.png" alt="Overview of the hybrid algorithm for movement detection" style="max-width: 100%; height: auto; margin: 20px 0;">
-  <p><em></em></p>
+  <p><em>Overview of the developed hybrid algorithm combining YOLOv5 object detection with motion analysis</em></p>
+</div>
+
+<div style="text-align: center;">
+  <video width="100%" max-width="800px" height="auto" controls style="margin: 20px 0;">
+    <source src="/images/YOLO_chicken_head_clipped.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p><em>Real-time head detection of laying hens using fine-tuned YOLOv5 on custom labeled dataset</em></p>
 </div>
 
 - Developed real-time animal behavior monitoring system
-- Combined YOLOv8 object detection with Gaussian Mixture Model motion detection
+- Combined YOLOv5 object detection with Gaussian Mixture Model motion detection
 - Achieved early detection of welfare-compromising behaviors
 
 **Resources:**
-- [Thesis](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9993097125501488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
+- [Thesis](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9993097125501488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%
+Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
 - [Publication](https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9994277629301488&context=L&vid=32KUL_KUL:KULeuven&lang=en&search_scope=All_Content&adaptor=Local%20Search%20Engine&tab=all_content_tab&query=any,contains,michiel%20ghesquiere)
 
 ---
