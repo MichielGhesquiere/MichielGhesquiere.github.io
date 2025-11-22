@@ -14,13 +14,27 @@ body {
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
-  background: #fff url('/images/neuron_pattern_zoomed.png') no-repeat center center fixed;
-  background-size: cover;
+  background: #fff; // Fallback
 
+  // background-image removed in favor of particles
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
   }
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #ffffff;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 h1,
