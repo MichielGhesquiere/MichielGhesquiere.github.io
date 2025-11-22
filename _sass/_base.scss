@@ -14,8 +14,8 @@ body {
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
-  background: #fff url('/images/neuron_pattern.png') repeat fixed;
-  background-size: 400px; // Adjust size as needed
+  background: #fff url('/images/neuron_pattern_zoomed.png') no-repeat center center fixed;
+  background-size: cover;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
