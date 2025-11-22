@@ -24,7 +24,13 @@ Bioscience Engineer with an additional Master's in Artificial Intelligence, comb
 
 ## Research Experience
 
-### Interdisciplinary research between Research Group Ophthalmology and Biomedical Signal Processing (KU Leuven) – Jan 2024-present
+### Data Scientist @ Sentigrate – Nov 2024-present
+
+**Developing AI solutions for mental health monitoring**
+- Leveraging wearable data and advanced signal processing to detect stress and other mental health indicators.
+- Contributing to the development of personalized feedback systems.
+
+### Interdisciplinary research between Research Group Ophthalmology and Biomedical Signal Processing (KU Leuven) – Jan 2024-Nov 2024
 
 **Multimodal retinal imaging for early Alzheimer's disease detection**
 - End-to-end pipeline (IQA, preprocessing, feature extraction, multimodal classification); best model achieved AUC 0.84
