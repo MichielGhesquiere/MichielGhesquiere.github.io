@@ -15,13 +15,9 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <div class="archive archive-shell">
-    {% unless page.show_title == false or page.header.overlay_color or page.header.overlay_image %}
-      <header class="page__header">
-        {% if page.eyebrow %}<p class="page__eyebrow">{{ page.eyebrow }}</p>{% endif %}
-        <h1 class="page__title">{{ page.title }}</h1>
-        {% if page.intro %}<p class="page__lead">{{ page.intro }}</p>{% endif %}
-      </header>
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
     {{ content }}
   </div>

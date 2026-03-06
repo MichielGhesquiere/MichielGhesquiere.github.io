@@ -5,162 +5,73 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
-eyebrow: "Experience"
-intro: "A concise view of my technical profile, research background, and work across AI, biosignals, and clinical imaging."
 ---
 
-<section class="cv-grid">
-  <article class="section-card">
-    <div class="section-card__header">
-      <p class="section-card__label">Profile</p>
-      <h2 class="section-card__title">Interdisciplinary ML practitioner with a health-tech bias</h2>
-    </div>
-    <p>I combine bioscience engineering, artificial intelligence, and applied research experience to build machine learning systems that are technically sound and practical to use. My work spans computer vision, biosignals, multimodal fusion, and model reliability.</p>
-  </article>
+{% include base_path %}
 
-  <article class="section-card">
-    <div class="section-card__header">
-      <p class="section-card__label">Current focus</p>
-      <h2 class="section-card__title">Where I create the most value</h2>
-    </div>
-    <ul class="section-card__chips">
-      <li class="metric-chip">Clinical Imaging</li>
-      <li class="metric-chip">Wearables</li>
-      <li class="metric-chip">Foundation Models</li>
-      <li class="metric-chip">Signal Processing</li>
-      <li class="metric-chip">PyTorch</li>
-      <li class="metric-chip">Model Evaluation</li>
-    </ul>
-  </article>
-</section>
+## Profile
+Bioscience Engineer with an additional Master's in Artificial Intelligence, combining expertise in life sciences with computational skills. I have applied AI across diverse domains, from medical imaging in ophthalmology to biosignal and activity recognition, with a focus on improving disease detection, monitoring, and decision-making. My interdisciplinary research integrates deep learning, image analysis, and signal processing, with experience in foundation model fine-tuning, multimodal data fusion, and development of custom loss functions. I bring strong problem-solving, collaboration, and communication skills, developed through interdisciplinary research.
 
-<section class="section-card">
-  <div class="section-card__header">
-    <p class="section-card__label">Skills</p>
-    <h2 class="section-card__title">Technical toolkit</h2>
-  </div>
+## Skills
 
-  <div class="cv-grid">
-    <div class="skill-cluster">
-      <h3>Computer Vision</h3>
-      <ul class="skill-chip-list">
-        <li class="skill-chip">Segmentation</li>
-        <li class="skill-chip">Detection</li>
-        <li class="skill-chip">Retinal Imaging</li>
-        <li class="skill-chip">Hyperspectral Imaging</li>
-        <li class="skill-chip">Foundation Models</li>
-      </ul>
-    </div>
-    <div class="skill-cluster">
-      <h3>ML and Data</h3>
-      <ul class="skill-chip-list">
-        <li class="skill-chip">PyTorch</li>
-        <li class="skill-chip">OpenCV</li>
-        <li class="skill-chip">Multimodal Fusion</li>
-        <li class="skill-chip">Signal Features</li>
-        <li class="skill-chip">Evaluation Design</li>
-      </ul>
-    </div>
-    <div class="skill-cluster">
-      <h3>Software Engineering</h3>
-      <ul class="skill-chip-list">
-        <li class="skill-chip">Python</li>
-        <li class="skill-chip">pytest</li>
-        <li class="skill-chip">Git</li>
-        <li class="skill-chip">CI/CD</li>
-        <li class="skill-chip">ONNX</li>
-      </ul>
-    </div>
-    <div class="skill-cluster">
-      <h3>Communication</h3>
-      <ul class="skill-chip-list">
-        <li class="skill-chip">Scientific Writing</li>
-        <li class="skill-chip">Cross-Functional Work</li>
-        <li class="skill-chip">Dutch</li>
-        <li class="skill-chip">English</li>
-      </ul>
-    </div>
-  </div>
-</section>
+**Computer Vision:** semantic segmentation (SwinV2), activity recognition (YOLOv8 + motion detection), disease classification (Alzheimer, Glaucoma), annotation platforms (Lirot.AI) video, hyperspectral imaging, feature extraction (e.g. texture)
 
-<section class="section-card">
-  <div class="section-card__header">
-    <p class="section-card__label">Experience</p>
-    <h2 class="section-card__title">Research and industry timeline</h2>
-  </div>
+**ML/AI:** theoretical foundation in ML, DL, NLP, CV (CNNs, ViT, VLM), following latest research in CV (e.g. DINOv3) and open-source models (HuggingFace)
 
-  <div class="timeline">
-    <article class="timeline-item">
-      <p class="timeline-item__meta">Nov 2024 - Present</p>
-      <h3>Data Scientist, Sentigrate</h3>
-      <ul>
-        <li>Developing AI solutions for mental health monitoring with wearable and behavioral data.</li>
-        <li>Applying signal processing and modeling to stress and related health indicators.</li>
-        <li>Contributing to personalized feedback systems grounded in real-world sensing constraints.</li>
-      </ul>
-    </article>
+**Communication & Languages:** scientific writing & presentations, cross-disciplinary teamwork (Life sciences & computer science); Dutch (native), English (fluent)
 
-    <article class="timeline-item">
-      <p class="timeline-item__meta">Jan 2024 - Nov 2024</p>
-      <h3>Interdisciplinary research, KU Leuven</h3>
-      <ul>
-        <li>Built multimodal retinal imaging pipelines for early Alzheimer&rsquo;s detection, including IQA, preprocessing, and classification.</li>
-        <li>Worked on glaucoma classification with visual foundation models and multi-source adaptation.</li>
-        <li>Implemented segmentation methods and vascular parameter extraction in fundus image and video data.</li>
-      </ul>
-    </article>
+**Software Engineering:** Python (PyTorch, OpenCV), testing (pytest); CI/CD (Git/GitLab), model export (ONNX)
 
-    <article class="timeline-item">
-      <p class="timeline-item__meta">Aug 2023 - Sep 2023</p>
-      <h3>Research internship, Clouds of Care</h3>
-      <ul>
-        <li>Studied the bi-directional relationship between sleep and dementia.</li>
-        <li>Developed a 1D-CNN for sleep spindle detection in EEG data.</li>
-      </ul>
-    </article>
-  </div>
-</section>
+## Research Experience
 
-<section class="cv-grid">
-  <article class="section-card">
-    <div class="section-card__header">
-      <p class="section-card__label">Education</p>
-      <h2 class="section-card__title">Academic background</h2>
-    </div>
-    <ul class="section-card__list">
-      <li><strong>Master of Science: Artificial Intelligence</strong>, KU Leuven, 2022-2023</li>
-      <li><strong>Master in Bioscience Engineering: Human Health Engineering</strong>, KU Leuven, 2020-2022</li>
-      <li><strong>Bachelor in Bioscience Engineering</strong>, KU Leuven, 2017-2020</li>
-    </ul>
-  </article>
+### Data Scientist @ Sentigrate – Nov 2024-present
 
-  <article class="section-card">
-    <div class="section-card__header">
-      <p class="section-card__label">Research outputs</p>
-      <h2 class="section-card__title">Publications and conferences</h2>
-    </div>
-    <ul class="section-card__list">
-      <li><strong>Publication:</strong> Hyperspectral retinal imaging as a surrogate marker for early stage Alzheimer&rsquo;s disease, <em>Acta Ophthalmologica</em>, 2025.</li>
-      <li><strong>Publication:</strong> Camera-based hybrid approach for early poultry behavior detection, KU Leuven, 2022.</li>
-      <li><strong>Conference:</strong> European Glaucoma Society congress, June 2024.</li>
-      <li><strong>Conference:</strong> European Association for Vision and Eye Research congress, November 2024.</li>
-    </ul>
-  </article>
-</section>
+**Developing AI solutions for mental health monitoring**
+- Leveraging wearable data and advanced signal processing to detect stress and other mental health indicators.
+- Contributing to the development of personalized feedback systems.
 
-<section class="section-card">
-  <div class="section-card__header">
-    <p class="section-card__label">Additional</p>
-    <h2 class="section-card__title">Leadership and community</h2>
-  </div>
-  <div class="section-card__columns">
-    <div>
-      <p><strong>Manager of the Faculty Bar</strong>, LBK Leuven</p>
-      <p>Managed a team of 15+ people, coordinated with external organizations, and handled operational issues.</p>
-    </div>
-    <div>
-      <p><strong>Leader and Board Member</strong>, KLJ Hagelstein</p>
-      <p>Animator and active member in a youth movement organization, with responsibility for planning and coordination.</p>
-    </div>
-  </div>
-</section>
+### Interdisciplinary research between Research Group Ophthalmology and Biomedical Signal Processing (KU Leuven) – Jan 2024-Nov 2024
+
+**Multimodal retinal imaging for early Alzheimer's disease detection**
+- End-to-end pipeline (IQA, preprocessing, feature extraction, multimodal classification); best model achieved AUC 0.84
+- Found novel texture biomarkers in hyperspectral retinal imaging
+- Assessed repeatability and reproducibility of image biomarkers
+
+**Multi-Source Domain Adaptation for Glaucoma Classification**
+- Addressing domain shift across different imaging devices and demographics by leveraging Vision Foundation Models (VFM) pre-trained with self-supervised learning
+- Using multi-source domain fine-tuning and implementing domain adaptation techniques
+
+**Artery and vein segmentation in fundus image and video data & subsequent parameter extraction**
+- Implemented custom loss functions to preserve correct topology, ensuring temporal consistency in video segmentation
+- Assessed repeatability of extracted vascular parameters (PVBM toolbox)
+
+### Research Internship Clouds of Care, Gent – August – September 2023
+- Research on the bi-directional link between sleep and dementia
+- Developing 1D-CNN for sleep spindle detection in EEG sleep data
+
+## Education
+
+- **Master of Science: Artificial Intelligence**, KU Leuven, 2022-2023
+  - Thesis: Developing an automatic seizure detection algorithm to facilitate treatment of patients with epilepsy using multimodal wearable sensor data (EEG, EMG, ACC)
+
+- **Master in Bioscience Engineering: Human Health Engineering**, KU Leuven, 2020-2022
+  - Thesis: Developing a camera-based activity recognition algorithm by combining object detection (YOLOv8) with motion detection (GMM)
+
+- **Bachelor in Bioscience Engineering**, KU Leuven, 2017-2020
+  - Undergraduate Thesis: researched bacterial protein aggregates, their induction, localization, and impact on cellular function (Selected as a finalist for the Student Research Awards)
+
+## Publications
+- M. Ghesquiere et al., "Seeing the light: Hyperspectral retinal imaging as a surrogate marker for early stage Alzheimer’s disease," <i>Acta Ophthalmologica</i>, vol. 103, no. S284, 2025, doi: 10.1111/aos.17369.
+- Willems, S., Ghesquiere, M., Liu, D., Mounir, M., & Norton, T. (2022). 'Development of a camera-based hybrid approach for the early detection of poultry red mite-related behaviors in individual laying hens'. Department of Biosystems, KU Leuven, Belgium
+
+## Conferences
+- European Glaucoma Society (EGS) 16th congress – 1-4 June, 2024
+- European Association for Vision and Eye Research (EVER) congress – 3-5 November, 2024
+
+## Volunteering
+- **Manager of the Faculty Bar**, LBK, Leuven
+  - Managing a team of 15+ people, communicating with external organizations, and solving any problems pertaining to the bar's function
+
+- **Leader & Board Member**, KLJ Hagelstein
+  - Animator and active member of the KLJ youth movement organization
+

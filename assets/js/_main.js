@@ -26,26 +26,46 @@ $(document).ready(function(){
   // init sticky sidebar
   $(".sticky").Stickyfill();
 
-  var syncStickySideBar = function(){
+  var stickySideBar = function(){
     const MINIMUM_WIDTH = 1024;
-    var width = $(window).width();
 
-    if (width > MINIMUM_WIDTH) {
+    // Adjust if the follow button is shown based upon screen size
+    var width = $(window).width();
+    var show = $(".author__urls-wrapper button").length === 0 ? width > MINIMUM_WIDTH : !$(".author__urls-wrapper button").is(":visible");
+
+    // Don't show the follow button if there is no content for it
+    var count = $('.author__urls.social-icons li').length - $('li[class="author__desktop"]').length;
+    if (width <= MINIMUM_WIDTH && count === 0) {
+      $(".author__urls-wrapper button").hide();
+      show = false;
+    }
+
+    if (show) {
+      // fix
       Stickyfill.rebuild();
       Stickyfill.init();
+      $(".author__urls").show();
     } else {
+      // unfix
       Stickyfill.stop();
+      $(".author__urls").hide();
     }
   };
 
-  syncStickySideBar();
+  stickySideBar();
 
   $(window).resize(function(){
-    syncStickySideBar();
+    stickySideBar();
+  });
+
+  // Follow menu drop down
+  $(".author__urls-wrapper button").on("click", function() {
+    $(".author__urls").fadeToggle("fast", function() {});
+    $(".author__urls-wrapper button").toggleClass("open");
   });
 
   // init smooth scroll, this needs to be slightly more than then fixed masthead height
-  $("a").smoothScroll({offset: -88});
+  $("a").smoothScroll({offset: -65});
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
