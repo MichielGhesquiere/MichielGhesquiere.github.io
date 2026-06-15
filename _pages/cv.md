@@ -10,27 +10,33 @@ redirect_from:
 {% include base_path %}
 
 ## Profile
-Bioscience Engineer with an additional Master's in Artificial Intelligence, combining expertise in life sciences with computational skills. I have applied AI across diverse domains, from medical imaging in ophthalmology to biosignal and activity recognition, with a focus on improving disease detection, monitoring, and decision-making. My interdisciplinary research integrates deep learning, image analysis, and signal processing, with experience in foundation model fine-tuning, multimodal data fusion, and development of custom loss functions. I bring strong problem-solving, collaboration, and communication skills, developed through interdisciplinary research.
+Bioscience Engineer with an additional Master's in Artificial Intelligence. I work at the intersection of computer vision and sensor time-series modeling, currently building AI systems for structural damage detection (DINOv3) and multimodal Human Activity Recognition with IMU and radar sensors at Sentigrate. My broader experience spans medical imaging (ophthalmology, hyperspectral imaging), wearable biosignal processing, and deep learning on the edge — from foundation model fine-tuning to model compression and efficient inference. I bring strong cross-disciplinary skills, developed through research in both life sciences and AI.
 
 ## Skills
 
-**Computer Vision:** semantic segmentation (SwinV2), activity recognition (YOLOv8 + motion detection), disease classification (Alzheimer, Glaucoma), annotation platforms (Lirot.AI) video, hyperspectral imaging, feature extraction (e.g. texture)
+**Computer Vision:** vision foundation models (DINOv3), semantic segmentation (SwinV2), object detection (YOLOv8), disease classification (Alzheimer, Glaucoma), video & hyperspectral imaging, feature extraction (texture), annotation platforms (Lirot.AI)
 
-**ML/AI:** theoretical foundation in ML, DL, NLP, CV (CNNs, ViT, VLM), following latest research in CV (e.g. DINOv3) and open-source models (HuggingFace)
+**Time-Series & Signal Processing:** multimodal HAR (IMU + radar), anomaly detection with foundation models (Chronos2), EEG/EMG processing, wearable sensor fusion
 
-**Communication & Languages:** scientific writing & presentations, cross-disciplinary teamwork (Life sciences & computer science); Dutch (native), English (fluent)
+**Edge AI & Model Efficiency:** DL on the edge, model compression (quantization, pruning, knowledge distillation), efficient architecture design, ONNX export
 
-**Software Engineering:** Python (PyTorch, OpenCV), testing (pytest); CI/CD (Git/GitLab), model export (ONNX)
+**ML/AI:** CNNs, Vision Transformers (ViT), VLMs, self-supervised learning, domain adaptation, multimodal fusion, foundation model fine-tuning (HuggingFace)
+
+**Software Engineering:** Python (PyTorch, OpenCV, NumPy), testing (pytest), CI/CD (Git/GitLab)
+
+**Communication & Languages:** scientific writing & presentations, cross-disciplinary teamwork; Dutch (native), English (fluent)
 
 ## Research Experience
 
-### Data Scientist @ Sentigrate – Nov 2024-present
+### Data Scientist @ Sentigrate – Nov 2025-present
 
-**Developing AI solutions for mental health monitoring**
-- Leveraging wearable data and advanced signal processing to detect stress and other mental health indicators.
-- Contributing to the development of personalized feedback systems.
+**Computer vision & sensor time-series modeling for real-world AI applications**
+- Structural damage detection in buildings using vision foundation models (DINOv3-based pipelines)
+- Multimodal Human Activity Recognition (HAR) with IMU and radar sensors
+- Deep learning on the edge: efficient architectures and model compression (quantization, pruning, distillation)
+- Anomaly detection in sensor time-series using foundation models (e.g., Chronos2)
 
-### Interdisciplinary research between Research Group Ophthalmology and Biomedical Signal Processing (KU Leuven) – Jan 2024-Nov 2024
+### Interdisciplinary research between Research Group Ophthalmology and Biomedical Signal Processing (KU Leuven) – Jan 2024-Sep 2025
 
 **Multimodal retinal imaging for early Alzheimer's disease detection**
 - End-to-end pipeline (IQA, preprocessing, feature extraction, multimodal classification); best model achieved AUC 0.84

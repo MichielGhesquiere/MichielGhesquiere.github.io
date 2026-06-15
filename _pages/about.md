@@ -9,7 +9,12 @@ redirect_from:
 
 Hi there! I am Michiel. 👋
 
-I am a Bioscience Engineer with an additional Master's in Artificial Intelligence, combining expertise in life sciences with computational skills. Currently I am working as a Data Scientist at Sentigrate. Previously, I conducted interdisciplinary research within the Research Group Ophthalmology and the Biomedical Signal Processing lab (STADIUS) at KU Leuven. 
+I am a Bioscience Engineer with an additional Master's in Artificial Intelligence, combining expertise in life sciences with computational skills. Currently I work as a Data Scientist at [Sentigrate](https://www.sentigrate.com), where I focus on two main areas:
 
-My work sits at the fascinating intersection of AI and life sciences, where I apply machine learning techniques to solve real-world biological challenges. I have applied AI across diverse domains, from medical imaging in ophthalmology to biosignal and activity recognition, with a focus on improving disease detection, monitoring, and decision-making. 
+- **Computer vision:** using vision foundation models (DINOv3) to detect structural damage in buildings
+- **Sensor time-series modeling:** multimodal Human Activity Recognition (HAR) with IMU and radar sensors, deep learning on the edge (efficient architectures, model compression), and anomaly detection with foundation models (e.g., Chronos2)
+
+Previously, I conducted interdisciplinary research within the Research Group Ophthalmology and the Biomedical Signal Processing lab (STADIUS) at KU Leuven, where I worked on multimodal retinal imaging for early Alzheimer's detection, vision foundation models for glaucoma classification, and multimodal seizure detection from wearable sensors.
+
+My work sits at the intersection of AI and real-world sensing, with a focus on practical, deployable models — from foundation model fine-tuning to efficient inference on edge devices.
 
