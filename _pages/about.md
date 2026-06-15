@@ -16,5 +16,5 @@ I am a Bioscience Engineer with an additional Master's in Artificial Intelligenc
 
 Previously, I conducted interdisciplinary research within the Research Group Ophthalmology and the Biomedical Signal Processing lab (STADIUS) at KU Leuven, where I worked on multimodal retinal imaging for early Alzheimer's detection, vision foundation models for glaucoma classification, and multimodal seizure detection from wearable sensors.
 
-My work sits at the intersection of AI and real-world sensing, with a focus on practical, deployable models — from foundation model fine-tuning to efficient inference on edge devices.
+I care about building models that actually work in the field: practical, efficient, and grounded in domain knowledge.
 

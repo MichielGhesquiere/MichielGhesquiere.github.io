@@ -31,6 +31,14 @@
     @include suffix(2 of 12);
   }
 
+  // When sidebar becomes fixed, replace float layout with margin-based
+  @media screen and (min-width: $sidebar-screen-min-width) {
+    float: none;
+    width: auto;
+    margin-left: 275px;
+    margin-right: 1em;
+  }
+
   .page__inner-wrap {
     @include full();
 

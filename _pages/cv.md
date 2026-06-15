@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 ## Profile
-Bioscience Engineer with an additional Master's in Artificial Intelligence. I work at the intersection of computer vision and sensor time-series modeling, currently building AI systems for structural damage detection (DINOv3) and multimodal Human Activity Recognition with IMU and radar sensors at Sentigrate. My broader experience spans medical imaging (ophthalmology, hyperspectral imaging), wearable biosignal processing, and deep learning on the edge — from foundation model fine-tuning to model compression and efficient inference. I bring strong cross-disciplinary skills, developed through research in both life sciences and AI.
+Bioscience Engineer with an additional Master's in Artificial Intelligence. I work at the intersection of computer vision and sensor time-series modeling, currently building AI systems for structural damage detection (DINOv3) and multimodal Human Activity Recognition with IMU and radar sensors at Sentigrate. My broader experience spans medical imaging (ophthalmology, hyperspectral imaging), wearable biosignal processing, and deep learning on the edge, from foundation model fine-tuning to model compression and efficient inference. I bring strong cross-disciplinary skills, developed through research in both life sciences and AI.
 
 ## Skills
 
