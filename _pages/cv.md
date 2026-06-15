@@ -30,11 +30,20 @@ Bioscience Engineer with an additional Master's in Artificial Intelligence. I wo
 
 ### Data Scientist @ Sentigrate – Nov 2025-present
 
-**Computer vision & sensor time-series modeling for real-world AI applications**
-- Structural damage detection in buildings using vision foundation models (DINOv3-based pipelines)
-- Multimodal Human Activity Recognition (HAR) with IMU and radar sensors
-- Deep learning on the edge: efficient architectures and model compression (quantization, pruning, distillation)
-- Anomaly detection in sensor time-series using foundation models (e.g., Chronos2)
+**[SCOPR](https://www.sentigrate.com/scopr/) — AI-powered building inspection**
+- Facade crack detection and damage segmentation using DINOv3-based pipelines
+- Exploring Vision Language Models (Gemma 4) for automated inspection report generation
+
+**[FoG](https://www.sentigrate.com/fog/) — Freeze of Gait detection for Parkinson's patients** (in collaboration with [Epihunter](https://www.epihunter.com))
+- Wearable EEG-based algorithm to detect and predict motor freezing episodes
+- On-device inference for real-time sensory cue triggering
+
+**[DistriMuSe](https://www.sentigrate.com/distrimuse/) — Multimodal activity recognition for elderly care**
+- Sensor fusion across IMU wearables, radar, and localization beacons
+- Real-time anomaly detection and activity classification for proactive care intervention; model compression for edge deployment
+
+**Traffic anomaly detection** (in collaboration with [Telraam](https://telraam.net))
+- Anomaly detection in traffic time-series using Chronos2, a foundation model for time-series forecasting
 
 ### Interdisciplinary research between Research Group Ophthalmology and Biomedical Signal Processing (KU Leuven) – Jan 2024-Sep 2025
 

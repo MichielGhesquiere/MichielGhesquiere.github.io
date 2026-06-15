@@ -5,7 +5,37 @@ permalink: /projects/
 author_profile: true
 ---
 
-## Featured Projects
+## Sentigrate Projects
+
+### 🏗️ SCOPR – AI-Powered Building Inspection
+**Key Innovation:** Vision foundation models for structural damage detection and VLM-based report generation
+
+[SCOPR](https://www.sentigrate.com/scopr/) helps real estate buyers identify construction defects before purchase. We build the end-to-end AI pipeline: facade crack detection and damage segmentation using DINOv3, and we explore Vision Language Models (Gemma 4) for automatically generating inspection reports from detected findings.
+
+---
+
+### 🧠 FoG – Freeze of Gait Detection
+**Key Innovation:** EEG-based prediction of Parkinson's motor freezing episodes
+
+In collaboration with [Epihunter](https://www.epihunter.com), the [FoG project](https://www.sentigrate.com/fog/) develops wearable EEG-based algorithms to detect and predict Freeze of Gait episodes in Parkinson's patients. On-device detection enables real-time sensory cueing to help patients regain movement and autonomy.
+
+---
+
+### 👴 DistriMuSe – Multimodal Activity Recognition for Elderly Care
+**Key Innovation:** Sensor fusion across IMU, radar, and localization beacons
+
+[DistriMuSe](https://www.sentigrate.com/distrimuse/) monitors activity and mobility in elderly care facilities using a combination of wearable sensors, radar, and localization beacons. We develop real-time activity recognition and anomaly detection pipelines that enable care homes to shift from reactive to proactive intervention, with a focus on efficient model deployment.
+
+---
+
+### 🚦 Traffic Anomaly Detection – In collaboration with [Telraam](https://telraam.net)
+**Key Innovation:** Foundation model-based anomaly detection in traffic time-series
+
+[Telraam](https://telraam.net) collects multi-modal street traffic data (pedestrians, cyclists, cars, heavy vehicles) using citizen-powered sensors. We apply Chronos2, a time-series foundation model, to detect anomalies in this sensor data — helping communities better understand and improve their local traffic conditions.
+
+---
+
+## Research Projects
 
 ### 🧠 Early Alzheimer's Detection via Multimodal Retinal Imaging
 **Key Innovation:** Novel texture biomarkers in hyperspectral retinal imaging, multimodal classifiaction achieving AUC 0.84
