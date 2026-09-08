@@ -44,7 +44,7 @@ In collaboration with [Epihunter](https://www.epihunter.com), the [FoG project](
 - Created novel hyperspecrtal imaging texture biomarker for early disease detection
 - Assessed repeatability and reproducibility of imaging biomarkers
 
-[Abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.17369) *(Preliminary results - full paper coming soon!)*
+[Full Paper](https://www.mdpi.com/2306-5354/13/9/1041) *(Bioengineering, 2026)* · [Preliminary Abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.17369)
 
 ---
 
