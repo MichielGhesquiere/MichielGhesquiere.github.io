@@ -27,31 +27,34 @@ author_profile: true
   .pj-btn { display: inline-block; background: #0077cc; color: #fff !important; border-radius: 6px; padding: 6px 14px; margin-right: 1em; }
   .pj-btn:hover { background: #005999; text-decoration: none !important; }
 
-  /* grid (Sentigrate) */
-  .pj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .pj-card { border: 1px solid #e6e8e9; border-radius: 8px; padding: 1.1em 1.2em; display: flex; flex-direction: column; }
+  /* slider (Sentigrate) */
+  .pj-slider { position: relative; }
+  .pj-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; gap: 16px; border-radius: 8px; }
+  .pj-track::-webkit-scrollbar { display: none; }
+  .pj-track:focus-visible { outline: 2px solid #0077cc; outline-offset: 4px; }
+  .pj-card { flex: 0 0 100%; scroll-snap-align: start; border: 1px solid #e6e8e9; border-radius: 8px; padding: 1.6em 1.8em 1.5em; background: #fff; display: flex; flex-direction: column; min-height: 15em; }
+  .pj-card .pj-title { font-size: 1.25em; }
+  .pj-card .pj-text { font-size: 0.92em; max-width: 40em; }
   .pj-card .pj-links { margin-top: auto; }
-  .pj-card .pj-title { font-size: 1em; }
-  .pj-card .pj-text, .pj-row .pj-text { font-size: 0.82em; }
-  .pj-row .pj-title { font-size: 1.05em; }
-
-  .pj-more { margin-top: 14px; }
-  .pj-more > summary { list-style: none; cursor: pointer; display: inline-block; font-size: 0.85em; font-weight: 600; color: #0077cc; border: 1px solid #cfe3f3; border-radius: 6px; padding: 6px 14px; margin-bottom: 14px; }
-  .pj-more > summary::-webkit-details-marker { display: none; }
-  .pj-more > summary:hover { background: #e6f1fa; }
-  .pj-more > summary .pj-more-close, .pj-more[open] > summary .pj-more-open { display: none; }
-  .pj-more[open] > summary .pj-more-close { display: inline; }
+  .pj-card .pj-meta { display: flex; justify-content: space-between; gap: 1em; }
+  .pj-count { font-weight: 500; letter-spacing: 0.04em; color: #9ca1a5; }
+  .pj-nav { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 16px; }
+  .pj-arrow { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e6e8e9; background: #fff; color: #494e52; font-size: 18px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
+  .pj-arrow:hover:not(:disabled) { border-color: #0077cc; color: #0077cc; }
+  .pj-arrow:disabled { opacity: 0.35; cursor: default; }
+  .pj-dots { display: flex; gap: 8px; align-items: center; }
+  .pj-dot { width: 10px; height: 10px; border-radius: 999px; border: 0; padding: 0; background: #d5d8da; cursor: pointer; transition: width 0.25s, background 0.25s; }
+  .pj-dot[aria-current="true"] { width: 30px; background: #0077cc; }
 
   /* list with thumbnail (research) */
-  .pj-row { display: grid; grid-template-columns: 220px 1fr; gap: 1.4em; padding: 1.4em 0; border-top: 1px solid #e6e8e9; }
+  .pj-row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 1.6em; align-items: start; padding: 1.4em 0; border-top: 1px solid #e6e8e9; }
   .pj-row:last-of-type { border-bottom: 1px solid #e6e8e9; }
-  .pj-thumb { border: 1px solid #e6e8e9; border-radius: 6px; background: #fff; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .pj-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+  .pj-thumb { border: 1px solid #e6e8e9; border-radius: 6px; background: #fff; aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .pj-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 
   @media (max-width: 700px) {
-    .pj-grid { grid-template-columns: 1fr; }
+    .pj-card { padding: 1.2em 1.2em; }
     .pj-row { grid-template-columns: 1fr; gap: 0.9em; }
-    .pj-thumb { max-width: 360px; }
   }
 </style>
 
@@ -78,18 +81,49 @@ author_profile: true
 <p class="pj-section-sub">Data Scientist, since November 2025</p>
 
 {%- assign sg = site.data.sentigrate_projects -%}
-{%- assign sg_more = sg | where_exp: "p", "p.featured != true" -%}
-<div class="pj-grid">
-{%- for p in sg -%}{%- if p.featured -%}{%- include project-card.html p=p -%}{%- endif -%}{%- endfor -%}
+<div class="pj-slider" data-slider>
+<div class="pj-track" tabindex="0" aria-label="Sentigrate projects, use arrow keys or swipe to browse">
+{%- for p in sg -%}{%- include project-card.html p=p i=forloop.index n=forloop.length -%}{%- endfor -%}
 </div>
-{%- if sg_more.size > 0 %}
-<details class="pj-more">
-<summary><span class="pj-more-open">Show {{ sg_more.size }} more project{% if sg_more.size > 1 %}s{% endif %}</span><span class="pj-more-close">Show fewer</span></summary>
-<div class="pj-grid">
-{%- for p in sg_more -%}{%- include project-card.html p=p -%}{%- endfor -%}
+<div class="pj-nav">
+<button class="pj-arrow" type="button" data-prev aria-label="Previous project">←</button>
+<div class="pj-dots">{%- for p in sg -%}<button class="pj-dot" type="button" aria-label="Show {{ p.title | escape }}"></button>{%- endfor -%}</div>
+<button class="pj-arrow" type="button" data-next aria-label="Next project">→</button>
 </div>
-</details>
-{%- endif %}
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-slider]');
+  if (!root) return;
+  var track = root.querySelector('.pj-track');
+  var cards = track.children;
+  var dots = root.querySelectorAll('.pj-dot');
+  var prev = root.querySelector('[data-prev]');
+  var next = root.querySelector('[data-next]');
+  function go(i) {
+    i = Math.max(0, Math.min(cards.length - 1, i));
+    track.scrollTo({ left: i * (cards[0].offsetWidth + 16), behavior: 'smooth' });
+  }
+  function update() {
+    var i = Math.min(cards.length - 1, Math.round(track.scrollLeft / (cards[0].offsetWidth + 16)));
+    for (var d = 0; d < dots.length; d++) dots[d].setAttribute('aria-current', d === i ? 'true' : 'false');
+    prev.disabled = i === 0;
+    next.disabled = i === cards.length - 1;
+    root.dataset.index = i;
+  }
+  prev.addEventListener('click', function () { go(+root.dataset.index - 1); });
+  next.addEventListener('click', function () { go(+root.dataset.index + 1); });
+  for (var d = 0; d < dots.length; d++) (function (d) { dots[d].addEventListener('click', function () { go(d); }); })(d);
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(+root.dataset.index + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(+root.dataset.index - 1); }
+  });
+  var t; track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(update, 60); });
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
 
 <h2 class="pj-section">Research at KU Leuven</h2>
 <p class="pj-section-sub">Research Group Ophthalmology &amp; ESAT-STADIUS, and master's theses</p>

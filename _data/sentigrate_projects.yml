@@ -1,6 +1,5 @@
 # Sentigrate projects shown on /projects/.
-# Order = display order. Projects with `featured: true` are always visible;
-# the rest are revealed with the "Show more" toggle.
+# Order = order in the slider (first entry is shown first).
 # To add a project, copy an entry and fill in the fields.
 
 - title: "FoG: freezing of gait in Parkinson's"
@@ -9,7 +8,6 @@
   tags: ["EEG", "Time series", "On-device inference"]
   link: "https://www.sentigrate.com/fog/"
   link_text: "Project page"
-  featured: true
 
 - title: "OnTracx: dynamic load tolerance for runners"
   meta: "Sports health · with OnTracx"
@@ -17,7 +15,6 @@
   tags: ["Wearable sensors", "Time series", "Injury prevention"]
   link: "https://www.ontracx.com/"
   link_text: "OnTracx"
-  featured: true
 
 - title: "DistriMuSe: activity recognition in care homes"
   meta: "Sensor fusion · elderly care"
@@ -25,7 +22,6 @@
   tags: ["IMU + radar", "HAR", "Edge AI"]
   link: "https://www.sentigrate.com/distrimuse/"
   link_text: "Project page"
-  featured: true
 
 - title: "SCOPR: AI-assisted building inspection"
   meta: "Computer vision"
@@ -33,7 +29,6 @@
   tags: ["DINOv3", "Segmentation", "VLMs"]
   link: "https://www.sentigrate.com/scopr/"
   link_text: "Project page"
-  featured: true
 
 - title: "Anomaly detection in street traffic"
   meta: "Time series · with Telraam"
@@ -41,4 +36,3 @@
   tags: ["Chronos2", "Foundation models", "Anomaly detection"]
   link: "https://telraam.net"
   link_text: "Telraam"
-  featured: false
