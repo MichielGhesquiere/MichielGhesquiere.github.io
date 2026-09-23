@@ -1,0 +1,44 @@
+# Sentigrate projects shown on /projects/.
+# Order = display order. Projects with `featured: true` are always visible;
+# the rest are revealed with the "Show more" toggle.
+# To add a project, copy an entry and fill in the fields.
+
+- title: "FoG: freezing of gait in Parkinson's"
+  meta: "Wearables · with Epihunter"
+  text: "Detecting and predicting freezing-of-gait episodes from wearable EEG. The model runs on the device, so it can trigger a sensory cue in real time to help the patient start moving again."
+  tags: ["EEG", "Time series", "On-device inference"]
+  link: "https://www.sentigrate.com/fog/"
+  link_text: "Project page"
+  featured: true
+
+- title: "OnTracx: dynamic load tolerance for runners"
+  meta: "Sports health · with OnTracx"
+  text: "OnTracx measures the biomechanical load of every run and rates each runner's load tolerance. We are upgrading this from a static to a dynamic model: tolerance drops when a runner reports pain during the week and rises as they build up cumulative load over time, so return-to-run and training plans adapt to the runner."
+  tags: ["Wearable sensors", "Time series", "Injury prevention"]
+  link: "https://www.ontracx.com/"
+  link_text: "OnTracx"
+  featured: true
+
+- title: "DistriMuSe: activity recognition in care homes"
+  meta: "Sensor fusion · elderly care"
+  text: "Combining wearable IMUs, radar and localisation beacons to recognise activities and flag anomalies, so care staff can act before problems escalate. Includes model compression for deployment on edge hardware."
+  tags: ["IMU + radar", "HAR", "Edge AI"]
+  link: "https://www.sentigrate.com/distrimuse/"
+  link_text: "Project page"
+  featured: true
+
+- title: "SCOPR: AI-assisted building inspection"
+  meta: "Computer vision"
+  text: "Helps property buyers spot construction defects before they buy. I work on facade crack detection and damage segmentation with DINOv3, and on turning the findings into inspection reports with vision-language models (Gemma 4)."
+  tags: ["DINOv3", "Segmentation", "VLMs"]
+  link: "https://www.sentigrate.com/scopr/"
+  link_text: "Project page"
+  featured: true
+
+- title: "Anomaly detection in street traffic"
+  meta: "Time series · with Telraam"
+  text: "Telraam's citizen-run sensors count pedestrians, cyclists, cars and heavy vehicles. I use Chronos2, a time-series foundation model, to detect anomalies in these counts and help communities understand their local traffic."
+  tags: ["Chronos2", "Foundation models", "Anomaly detection"]
+  link: "https://telraam.net"
+  link_text: "Telraam"
+  featured: false

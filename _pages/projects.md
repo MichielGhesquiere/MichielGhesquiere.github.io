@@ -35,6 +35,13 @@ author_profile: true
   .pj-card .pj-text, .pj-row .pj-text { font-size: 0.82em; }
   .pj-row .pj-title { font-size: 1.05em; }
 
+  .pj-more { margin-top: 14px; }
+  .pj-more > summary { list-style: none; cursor: pointer; display: inline-block; font-size: 0.85em; font-weight: 600; color: #0077cc; border: 1px solid #cfe3f3; border-radius: 6px; padding: 6px 14px; margin-bottom: 14px; }
+  .pj-more > summary::-webkit-details-marker { display: none; }
+  .pj-more > summary:hover { background: #e6f1fa; }
+  .pj-more > summary .pj-more-close, .pj-more[open] > summary .pj-more-open { display: none; }
+  .pj-more[open] > summary .pj-more-close { display: inline; }
+
   /* list with thumbnail (research) */
   .pj-row { display: grid; grid-template-columns: 220px 1fr; gap: 1.4em; padding: 1.4em 0; border-top: 1px solid #e6e8e9; }
   .pj-row:last-of-type { border-bottom: 1px solid #e6e8e9; }
@@ -70,36 +77,19 @@ author_profile: true
 <h2 class="pj-section">Applied AI at Sentigrate</h2>
 <p class="pj-section-sub">Data Scientist, since November 2025</p>
 
+{%- assign sg = site.data.sentigrate_projects -%}
+{%- assign sg_more = sg | where_exp: "p", "p.featured != true" -%}
 <div class="pj-grid">
-  <div class="pj-card">
-    <p class="pj-meta">Computer vision</p>
-    <h3 class="pj-title">SCOPR: AI-assisted building inspection</h3>
-    <p class="pj-text">Helps property buyers spot construction defects before they buy. I work on facade crack detection and damage segmentation with DINOv3, and on turning the findings into inspection reports with vision-language models (Gemma 4).</p>
-    <ul class="pj-tags"><li>DINOv3</li><li>Segmentation</li><li>VLMs</li></ul>
-    <p class="pj-links"><a href="https://www.sentigrate.com/scopr/">Project page →</a></p>
-  </div>
-  <div class="pj-card">
-    <p class="pj-meta">Wearables · with Epihunter</p>
-    <h3 class="pj-title">FoG: freezing of gait in Parkinson's</h3>
-    <p class="pj-text">Detecting and predicting freezing-of-gait episodes from wearable EEG. The model runs on the device, so it can trigger a sensory cue in real time to help the patient start moving again.</p>
-    <ul class="pj-tags"><li>EEG</li><li>Time series</li><li>On-device inference</li></ul>
-    <p class="pj-links"><a href="https://www.sentigrate.com/fog/">Project page →</a></p>
-  </div>
-  <div class="pj-card">
-    <p class="pj-meta">Sensor fusion · elderly care</p>
-    <h3 class="pj-title">DistriMuSe: activity recognition in care homes</h3>
-    <p class="pj-text">Combining wearable IMUs, radar and localisation beacons to recognise activities and flag anomalies, so care staff can act before problems escalate. Includes model compression for deployment on edge hardware.</p>
-    <ul class="pj-tags"><li>IMU + radar</li><li>HAR</li><li>Edge AI</li></ul>
-    <p class="pj-links"><a href="https://www.sentigrate.com/distrimuse/">Project page →</a></p>
-  </div>
-  <div class="pj-card">
-    <p class="pj-meta">Time series · with Telraam</p>
-    <h3 class="pj-title">Anomaly detection in street traffic</h3>
-    <p class="pj-text">Telraam's citizen-run sensors count pedestrians, cyclists, cars and heavy vehicles. I use Chronos2, a time-series foundation model, to detect anomalies in these counts and help communities understand their local traffic.</p>
-    <ul class="pj-tags"><li>Chronos2</li><li>Foundation models</li><li>Anomaly detection</li></ul>
-    <p class="pj-links"><a href="https://telraam.net">Telraam →</a></p>
-  </div>
+{%- for p in sg -%}{%- if p.featured -%}{%- include project-card.html p=p -%}{%- endif -%}{%- endfor -%}
 </div>
+{%- if sg_more.size > 0 %}
+<details class="pj-more">
+<summary><span class="pj-more-open">Show {{ sg_more.size }} more project{% if sg_more.size > 1 %}s{% endif %}</span><span class="pj-more-close">Show fewer</span></summary>
+<div class="pj-grid">
+{%- for p in sg_more -%}{%- include project-card.html p=p -%}{%- endfor -%}
+</div>
+</details>
+{%- endif %}
 
 <h2 class="pj-section">Research at KU Leuven</h2>
 <p class="pj-section-sub">Research Group Ophthalmology &amp; ESAT-STADIUS, and master's theses</p>

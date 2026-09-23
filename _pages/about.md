@@ -7,14 +7,18 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I am Michiel. 👋
+Hi, I'm Michiel.
 
-I am a Bioscience Engineer with an additional Master's in Artificial Intelligence, combining expertise in life sciences with computational skills. Currently I work as a Data Scientist at [Sentigrate](https://www.sentigrate.com), where I focus on two main areas:
+I'm a Data Scientist at [Sentigrate](https://www.sentigrate.com), trained as a Bioscience Engineer in Human Health Engineering, with an additional Master's in Artificial Intelligence, both at KU Leuven.
 
-- **Computer vision:** structural damage detection in buildings using DINOv3 segmentation and Vision Language Models (Gemma 4) for report generation ([SCOPR](https://www.sentigrate.com/scopr/))
-- **Sensor time-series modeling:** Freeze of Gait detection from EEG wearables ([FoG](https://www.sentigrate.com/fog/), with [Epihunter](https://www.epihunter.com)), multimodal HAR with IMU and radar ([DistriMuSe](https://www.sentigrate.com/distrimuse/)), and traffic anomaly detection with Chronos2 (with [Telraam](https://telraam.net))
+My work sits where AI meets healthcare. I work mostly in:
 
-Previously, I conducted interdisciplinary research within the Research Group Ophthalmology and the Biomedical Signal Processing lab (STADIUS) at KU Leuven, where I worked on multimodal retinal imaging for early Alzheimer's detection, vision foundation models for glaucoma classification, and multimodal seizure detection from wearable sensors.
+- **Signal processing and time series:** biosignals and wearable sensors such as EEG, IMU and radar
+- **Computer vision:** from medical imaging to real-world camera data
+- **Multimodal learning:** combining several sensors or imaging techniques so that each covers what the others miss
 
-I care about building models that actually work in the field: practical, efficient, and grounded in domain knowledge.
+Healthcare is where I most want these methods to make a difference: detecting disease earlier, monitoring people outside the hospital, and giving clinicians tools they can trust.
 
+Before Sentigrate, I did interdisciplinary research at KU Leuven, between the Research Group Ophthalmology and the STADIUS signal processing lab. My work there on retinal imaging for early Alzheimer's detection was recently published in *Bioengineering* ([read the story](/projects/retinal-alzheimers/)).
+
+I care about models that work outside the lab: practical, efficient, and grounded in domain knowledge. Have a look at my [projects](/projects/) or my [CV](/cv/).
