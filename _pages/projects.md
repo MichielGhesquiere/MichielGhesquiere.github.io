@@ -5,6 +5,25 @@ permalink: /projects/
 author_profile: true
 ---
 
+## Featured Publication
+
+### 🧠 Early Alzheimer's Detection via Multimodal Retinal Imaging
+**Key Innovation:** Novel texture biomarkers in hyperspectral retinal imaging; multimodal classification achieving AUC 0.84
+
+<div style="text-align: center;">
+  <a href="/projects/retinal-alzheimers/"><img src="/images/retad/graphical-abstract.png" alt="Graphical abstract: 40 participants with PET-confirmed amyloid status, three retinal imaging modalities (HSI, OCT, fundus photography), and classification results" style="max-width: 100%; height: auto; margin: 20px 0;"></a>
+</div>
+
+Can a set of eye scans pick up signals linked to amyloid in the brain, before dementia? We combined hyperspectral imaging, OCT and fundus photography in 40 people with PET-confirmed amyloid status.
+
+- Developed end-to-end pipeline from image quality assessment to multimodal classification
+- Created a novel hyperspectral imaging texture biomarker for early disease detection
+- Assessed repeatability and reproducibility of imaging biomarkers
+
+**[→ Read the plain-language story behind the paper](/projects/retinal-alzheimers/)** · [Full Paper](https://www.mdpi.com/2306-5354/13/9/1041) *(Bioengineering, 2026)* · [Preliminary Abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.17369)
+
+---
+
 ## Sentigrate Projects
 
 ### 🏗️ SCOPR – AI-Powered Building Inspection
@@ -36,17 +55,6 @@ In collaboration with [Epihunter](https://www.epihunter.com), the [FoG project](
 ---
 
 ## Research Projects
-
-### 🧠 Early Alzheimer's Detection via Multimodal Retinal Imaging
-**Key Innovation:** Novel texture biomarkers in hyperspectral retinal imaging, multimodal classifiaction achieving AUC 0.84
-
-- Developed end-to-end pipeline from image quality assessment to multimodal classification
-- Created novel hyperspecrtal imaging texture biomarker for early disease detection
-- Assessed repeatability and reproducibility of imaging biomarkers
-
-[Full Paper](https://www.mdpi.com/2306-5354/13/9/1041) *(Bioengineering, 2026)* · [Preliminary Abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.17369)
-
----
 
 ### 👁️ Vision Foundation Models for Glaucoma Classification
 **Key Innovation:** Addressing domain shift across imaging devices and demographics

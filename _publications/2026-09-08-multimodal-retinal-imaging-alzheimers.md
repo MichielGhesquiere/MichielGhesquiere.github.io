@@ -10,3 +10,5 @@ citation: 'Ghesquiere, M. et al. (2026). "Multimodal Retinal Imaging for the Det
 ---
 
 This proof-of-concept study investigates whether multimodal retinal imaging—hyperspectral imaging, optical coherence tomography, and color fundus photography—can differentiate individuals with and without cerebral amyloid-beta pathology, supporting multimodal retinal imaging as a scalable, non-invasive screening approach for early Alzheimer's disease.
+
+[Read the plain-language summary of this paper →](/projects/retinal-alzheimers/)

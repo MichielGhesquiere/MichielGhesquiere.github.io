@@ -1,0 +1,607 @@
+---
+layout: null
+permalink: /projects/retinal-alzheimers/
+title: "Multimodal Retinal Imaging for Early Alzheimer's Detection"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retinal Imaging for Early Alzheimer's · Michiel Ghesquiere</title>
+<meta name="description" content="A plain-language walkthrough of our Bioengineering (2026) paper: can hyperspectral imaging, OCT and fundus photography of the retina detect signs of early Alzheimer's disease?">
+<meta property="og:title" content="Multimodal Retinal Imaging for the Detection of Early Alzheimer's Disease">
+<meta property="og:description" content="Can a set of eye scans pick up signals linked to amyloid in the brain, before dementia? A plain-language summary of our 2026 Bioengineering paper.">
+<meta property="og:image" content="{{ site.url }}/images/retad/graphical-abstract.png">
+<meta property="og:type" content="article">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* colours taken from _sass/_variables.scss so this page matches the rest of the site */
+  --bg: #fff;
+  --surface: #fff;
+  --surface-2: #fafafa;       /* $code-background-color */
+  --text: #494e52;            /* $text-color (dark-gray) */
+  --heading: #313436;         /* $darker-gray */
+  --muted: #7a8288;           /* $gray */
+  --faint: #9ca1a5;
+  --line: #e6e8e9;            /* between $lighter-gray and $light-gray */
+  --accent: #0077cc;          /* $primary-color */
+  --accent-soft: #e6f1fa;
+  --link: #17a2b8;            /* $link-color */
+  --neg: #33415c;             /* amyloid-negative, matches paper figures */
+  --pos: #b3261e;             /* amyloid-positive */
+  --hsi: #5b44b0;             /* modality colours from the graphical abstract */
+  --oct: #0f7a6c;
+  --cfp: #b0472b;
+  --caveat-bg: #fef6ea;
+  --caveat-line: #f89406;     /* $warning-color */
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 Inter, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { color: #117a8b; }
+h1, h2, h3, h4 { color: var(--heading); }
+img { max-width: 100%; display: block; }
+
+.sans, h1, h2, h3, .eyebrow, .btn, nav, .stat, .caption, .kicker, .label, table, .demo, .authors, footer {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.wide { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+nav.top { background: #fff; border-bottom: 1px solid #f2f3f3; font-size: 16px; }
+nav.top .wide { display: flex; flex-wrap: wrap; gap: 4px 28px; align-items: center; min-height: 70px; max-width: 1280px; }
+nav.top a { color: var(--accent); text-decoration: none; }
+nav.top a:hover { color: #005999; }
+nav.top .home { font-weight: 700; margin-right: 20px; }
+
+/* ---------- Hero ---------- */
+header.hero { padding: 64px 0 40px; }
+.eyebrow {
+  display: inline-flex; gap: 8px; align-items: center;
+  font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 5px 10px; border-radius: 999px;
+}
+h1 {
+  font-size: clamp(30px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em;
+  margin: 20px 0 20px; font-weight: 700;
+}
+.lede { font-size: 21px; line-height: 1.55; color: var(--muted); margin: 0 0 24px; }
+.lede em { color: var(--text); }
+.authors { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.authors strong { color: var(--text); font-weight: 600; }
+.affil { font-size: 13px; color: var(--faint); margin-top: 4px; }
+.btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  padding: 10px 16px; border-radius: 10px;
+  border: 1px solid var(--line); color: var(--text); background: var(--surface);
+}
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.primary:hover { background: #005999; color: #fff; }
+.btn small { font-weight: 500; opacity: .7; font-size: 12px; }
+
+/* ---------- Stats strip ---------- */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; margin: 8px 0 0;
+}
+.stat { background: var(--surface); padding: 18px 18px 16px; }
+.stat b { display: block; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.stat span { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+@media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---------- Sections ---------- */
+section { padding: 56px 0 8px; }
+.kicker {
+  font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--faint); margin: 0 0 8px;
+}
+h2 { font-size: clamp(24px, 3.4vw, 31px); line-height: 1.2; letter-spacing: -0.015em; margin: 0 0 18px; }
+h3 { font-size: 19px; line-height: 1.3; margin: 32px 0 10px; }
+p { margin: 0 0 18px; }
+.muted { color: var(--muted); }
+
+figure { margin: 32px 0; }
+figure .paper {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px; overflow: hidden;
+}
+.caption { font-size: 14px; line-height: 1.55; color: var(--muted); margin-top: 12px; }
+.caption b { color: var(--text); }
+
+/* Modality cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0; }
+@media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px 18px 16px; border-top: 4px solid var(--c);
+  font-family: Inter, system-ui, sans-serif; font-size: 14.5px; line-height: 1.55;
+}
+.card .label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--c); }
+.card h4 { font-size: 17px; margin: 6px 0 8px; }
+.card p { margin: 0 0 10px; color: var(--muted); }
+.card .measures { font-size: 13px; color: var(--text); border-top: 1px solid var(--line); padding-top: 10px; margin-top: 4px; }
+
+/* Cohort */
+.cohort { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; font-family: Inter, system-ui, sans-serif; }
+@media (max-width: 620px) { .cohort { grid-template-columns: 1fr; } }
+.group { border-radius: var(--radius); padding: 18px; border: 1px solid var(--line); background: var(--surface); }
+.group .n { font-size: 34px; font-weight: 700; line-height: 1; }
+.group .t { font-weight: 600; margin-top: 6px; }
+.group .d { font-size: 13.5px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.group.neg .n { color: var(--neg); }
+.group.pos .n { color: var(--pos); }
+.dots { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); display: block; }
+.dots i.mci { background: transparent; box-shadow: inset 0 0 0 2px var(--c); }
+
+/* Caveat box */
+.caveat {
+  background: var(--caveat-bg); border-left: 4px solid var(--caveat-line);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px; margin: 24px 0;
+  font-family: Inter, system-ui, sans-serif; font-size: 14.5px; line-height: 1.6;
+}
+.caveat b.h { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+.caveat p { margin: 0 0 8px; } .caveat p:last-child { margin: 0; }
+
+/* Finding header */
+.finding { display: flex; gap: 16px; align-items: baseline; }
+.finding .num {
+  font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 14px;
+  color: #fff; background: var(--c, var(--accent)); border-radius: 8px;
+  padding: 3px 9px; flex: none; transform: translateY(-3px);
+}
+
+/* Demo */
+.demo {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; margin: 28px 0;
+}
+.demo-grid { display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center; }
+@media (max-width: 620px) { .demo-grid { grid-template-columns: 1fr; justify-items: center; } }
+.demo canvas { width: 240px; height: 240px; border-radius: 10px; image-rendering: pixelated; display: block; }
+.demo .readout { font-size: 13px; color: var(--muted); }
+.demo .readout b { display: block; font-size: 40px; color: var(--text); letter-spacing: -0.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.demo input[type=range] { width: 100%; accent-color: var(--accent); margin: 14px 0 4px; }
+.demo .ends { display: flex; justify-content: space-between; font-size: 12px; color: var(--faint); }
+.demo .note { font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.55; }
+
+/* AUC explainer */
+.metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+@media (max-width: 620px) { .metric-row { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; font-family: Inter, system-ui, sans-serif; }
+.metric b { font-size: 30px; display: block; letter-spacing: -0.02em; }
+.metric span { font-size: 13.5px; color: var(--muted); line-height: 1.5; display: block; margin-top: 4px; }
+
+/* ATVN */
+.atvn { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 24px 0; font-family: Inter, system-ui, sans-serif; }
+@media (max-width: 720px) { .atvn { grid-template-columns: repeat(2, 1fr); } }
+.atvn div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.atvn .l { font-size: 26px; font-weight: 700; color: var(--c); }
+.atvn .w { font-size: 13px; font-weight: 600; margin-top: 2px; }
+.atvn .r { font-size: 12.5px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+
+/* Takeaways */
+ol.take { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: t; }
+ol.take li {
+  counter-increment: t; position: relative; padding: 18px 0 18px 64px;
+  border-top: 1px solid var(--line);
+}
+ol.take li:last-child { border-bottom: 1px solid var(--line); }
+ol.take li::before {
+  content: counter(t, decimal-leading-zero);
+  position: absolute; left: 0; top: 16px;
+  font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 24px; color: var(--accent);
+}
+ol.take li b { font-family: Inter, system-ui, sans-serif; display: block; font-size: 16.5px; margin-bottom: 4px; }
+ol.take li span { color: var(--muted); font-size: 16px; }
+
+ul.limits { padding-left: 20px; }
+ul.limits li { margin-bottom: 10px; }
+
+pre.bib {
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px; overflow-x: auto; font: 12.5px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--text); white-space: pre;
+}
+.copy { margin-top: 10px; font-size: 13px; cursor: pointer; }
+
+footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 28px 0 48px; font-size: 13px; color: var(--faint); line-height: 1.6; }
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wide">
+    <a class="home" href="/">{{ site.title }}</a>
+    {% for link in site.data.navigation.main %}<a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Published · Bioengineering 2026 · Open access</span>
+    <h1>Multimodal Retinal Imaging for the Detection of Early Alzheimer's Disease</h1>
+    <p class="lede">Alzheimer's disease starts silently, decades before memory begins to fail. We asked whether a set of eye scans could pick up signs linked to <em>amyloid build-up in the brain</em> in people who are still cognitively normal or only mildly impaired, and whether combining different kinds of scan works better than any one alone.</p>
+    <div class="authors">
+      <strong>Michiel Ghesquiere</strong>, Eirini Christinaki, Sophie Lemmens, Jan Van Eijgen, Lennert Beeckmans, Achilleas Ghinis, Thomas Jacobs, Karel Van Keer, Zahi Wehbi, Lies De Groef, Yasmin Dahdouh-Guebas, Wouter Charle, Thomas Vande Casteele, Mathieu Vandenbulcke, Greet Vanderlinden, Koen Van Laere, Jolien Schaeverbeke, Rik Vandenberghe, Jenny Ceccarini, Maarten De Vos, Ingeborg Stalmans
+      <div class="affil">KU Leuven: Research Group Ophthalmology, ESAT-STADIUS, Leuven Brain Institute · University Hospitals Leuven · imec</div>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="https://www.mdpi.com/2306-5354/13/9/1041">Read the paper <small>MDPI</small></a>
+      <a class="btn" href="https://clinicaltrials.gov/study/NCT03466177">RetAD study <small>NCT03466177</small></a>
+      <a class="btn" href="#cite">Cite</a>
+    </div>
+  </div>
+</header>
+
+<div class="wide">
+  <div class="stats">
+    <div class="stat"><b>40</b><span>participants with brain amyloid status confirmed by PET scan</span></div>
+    <div class="stat"><b>3</b><span>retinal imaging techniques, all in the same eye</span></div>
+    <div class="stat"><b>0.84</b><span>best AUC, from combining hyperspectral imaging with OCT</span></div>
+    <div class="stat"><b>Proof of concept</b><span>promising, but needs confirmation in larger cohorts</span></div>
+  </div>
+</div>
+
+<!-- ============ WHY ============ -->
+<section id="why">
+  <div class="wrap">
+    <p class="kicker">The problem</p>
+    <h2>Finding Alzheimer's early is hard, and it matters</h2>
+    <p>In Alzheimer's disease, two proteins, <b>amyloid-β</b> and <b>tau</b>, slowly accumulate in the brain long before symptoms appear. Worldwide, an estimated 315 million people are thought to be in this silent "preclinical" phase: amyloid-positive, but cognitively normal.</p>
+    <p>Spotting the disease at this stage is becoming more important. New antibody treatments that target amyloid can moderately slow cognitive decline, clinical trials need to recruit people early, and lifestyle changes have the most room to help. But the reference tests, a <b>PET scan</b> of the brain or a <b>spinal tap</b> to analyse cerebrospinal fluid, are expensive or invasive, and not suited to screening large groups of people. Blood tests are a promising alternative. So is the eye.</p>
+    <h3>Why the retina?</h3>
+    <p>The retina grows out of the same embryonic tissue as the brain and is directly connected to it through the optic nerve. It is the only part of the central nervous system we can look at directly, with light, in a few seconds, and without any injection. And the cameras to do it are already in eye clinics. If Alzheimer's-related changes show up in the retina, an eye exam could one day help decide who should get a PET scan or be invited to a trial.</p>
+  </div>
+</section>
+
+<!-- ============ HOW ============ -->
+<section id="how">
+  <div class="wrap">
+    <p class="kicker">The approach</p>
+    <h2>Three cameras, three different views of the same retina</h2>
+    <p>Each imaging technique captures a different aspect of the retina. The underlying idea: Alzheimer's is not one process but several (protein build-up, loss of nerve cells, blood vessel problems), so a combination of views might see more than any single one.</p>
+  </div>
+  <div class="wide">
+    <div class="cards">
+      <div class="card" style="--c: var(--hsi)">
+        <div class="label">HSI</div>
+        <h4>Hyperspectral imaging</h4>
+        <p>A camera that photographs the back of the eye in many narrow colour bands at once, from blue to orange (≈460–620 nm), in a 0.2 ms snapshot. How tissue reflects and scatters each colour depends on its microscopic make-up.</p>
+        <div class="measures"><b>We measured:</b> the <i>texture</i> of the macula in each colour band</div>
+      </div>
+      <div class="card" style="--c: var(--oct)">
+        <div class="label">OCT</div>
+        <h4>Optical coherence tomography</h4>
+        <p>An "ultrasound with light" that produces cross-sections of the retina, resolving its individual layers at micrometre scale.</p>
+        <div class="measures"><b>We measured:</b> thickness of the <i>ganglion cell–inner plexiform layer</i> (GC-IPL), where the retina's output neurons and their connections live. Thinning points to neurodegeneration.</div>
+      </div>
+      <div class="card" style="--c: var(--cfp)">
+        <div class="label">CFP</div>
+        <h4>Colour fundus photography</h4>
+        <p>The standard colour photo of the back of the eye. A deep learning model traced every artery and vein automatically.</p>
+        <div class="measures"><b>We measured:</b> 24 <i>vascular biomarkers</i>, such as the average width of arterioles (CRAE) and venules (CRVE)</div>
+      </div>
+    </div>
+    <figure>
+      <div class="paper"><img src="/images/retad/modalities.png" alt="Three retinal imaging modalities: a stack of hyperspectral images with a reflectance spectrum, an OCT B-scan with the ETDRS grid and labelled layers, and two colour fundus photos with segmented arteries and veins" loading="lazy"></div>
+      <figcaption class="caption"><b>The three modalities, shown for one amyloid-negative participant.</b> (a) Hyperspectral images at different wavelengths, with the macula split into superior and inferior halves, and the average reflectance spectrum. (b) OCT thickness map on the standard 9-region ETDRS grid, and a cross-section with the nerve fibre (RNFL), ganglion cell (GC) and inner plexiform (IPL) layers. (c) Fundus photos with automatically segmented arterioles (CRAE) and venules (CRVE).</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <h3>Who took part</h3>
+    <p>The 40 participants (aged 50–85) came from <a href="https://clinicaltrials.gov/study/NCT03466177">RetAD</a>, a longitudinal study at UZ Leuven. Crucially, everyone had an <b>amyloid PET scan</b>, so we knew who had amyloid in their brain, rather than relying on symptoms alone.</p>
+  </div>
+  <div class="wide" style="max-width: 792px">
+    <div class="cohort">
+      <div class="group neg" style="--c: var(--neg)">
+        <div class="n">23</div>
+        <div class="t">Amyloid-negative (Aβ−)</div>
+        <div class="d">All cognitively normal. The control group.</div>
+        <div class="dots" id="dots-neg"></div>
+      </div>
+      <div class="group pos" style="--c: var(--pos)">
+        <div class="n">17</div>
+        <div class="t">Amyloid-positive (Aβ+)</div>
+        <div class="d">10 cognitively normal (preclinical Alzheimer's, ●) and 7 with mild cognitive impairment (prodromal, ○).</div>
+        <div class="dots" id="dots-pos"></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p>For each modality we trained a simple, transparent model (logistic regression) to tell Aβ+ from Aβ− participants, and tested it with <b>leave-one-out cross-validation</b>: the model is trained on 39 people and asked to predict the 40th, repeated for every person. That way, nobody is ever scored by a model that has seen them.</p>
+  </div>
+</section>
+
+<!-- ============ TEXTURE ============ -->
+<section id="texture">
+  <div class="wrap">
+    <p class="kicker">A closer look</p>
+    <h2>Reading texture, not just colour</h2>
+    <p>Raw brightness in a hyperspectral image varies a lot from person to person: lens clarity, pupil size and camera flash all play a role. In our data, the normalised brightness per colour band overlapped heavily between the two groups. So instead of asking <i>how bright</i> the retina is, we asked <i>how the brightness is arranged</i>.</p>
+    <p>One classic texture measure is <b>GLCM correlation</b> (from the gray-level co-occurrence matrix). It asks: if I know the brightness of one pixel, how well can I predict the brightness of its neighbour? A smooth, uniform texture gives a value close to 1. A patchier, more heterogeneous texture gives a lower value. Try it:</p>
+    <div class="demo">
+      <div class="demo-grid">
+        <canvas id="tex" width="96" height="96" aria-label="Generated texture illustrating GLCM correlation"></canvas>
+        <div>
+          <div class="readout">GLCM correlation of this image<b id="corr">0.93</b></div>
+          <input id="smooth" type="range" min="0" max="100" value="62" aria-label="Texture smoothness">
+          <div class="ends"><span>patchy / heterogeneous</span><span>smooth / uniform</span></div>
+          <p class="note">Computed live on this image, using the same neighbour definition as in the paper: directly adjacent pixels, averaged over four directions. (The texture itself is synthetic, for illustration.) In real retinas, all values sat between roughly 0.90 and 0.96, and the difference between the group medians was only about 0.01: invisible to the eye, but measurable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINDINGS ============ -->
+<section id="findings">
+  <div class="wrap">
+    <p class="kicker">What we found</p>
+    <h2>Five findings, and how sure we are about each</h2>
+
+    <div class="finding" style="--c: var(--hsi)"><span class="num">1</span><h3>In blue light, amyloid-positive retinas look slightly more heterogeneous</h3></div>
+    <p>Across all colour bands and regions, the strongest candidate signal was GLCM correlation at <b>466 nm</b>, the shortest (bluest) wavelength we analysed. Amyloid-positive participants had lower values, meaning a more heterogeneous local texture. The difference was clearest in the <b>lower (inferior) half of the macula</b>, where texture alone separated the groups with an AUC of 0.72.</p>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="paper"><img src="/images/retad/hsi-texture-by-region.png" alt="Box plots of GLCM correlation at 466 nm for amyloid-negative and amyloid-positive participants in the full macular grid (p=0.031), superior hemisphere (p=0.106) and inferior hemisphere (p=0.010)" loading="lazy"></div>
+      <figcaption class="caption"><b>Retinal texture at 466 nm by region.</b> Each dot is one participant (dark: Aβ−, red: Aβ+). The lower half of the macula shows the clearest difference; the upper half does not reach significance.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <p>Why blue? Shorter wavelengths scatter more strongly off very small structures in tissue. Earlier studies, in Alzheimer's mouse models and in patients, also reported the largest retinal optical changes at short wavelengths, below about 500–565 nm.</p>
+    <div class="caveat">
+      <b class="h">How sure are we?</b>
+      <p>This was an <b>exploratory screen</b>: we compared 14 wavelengths × 3 regions = 42 combinations. After correcting for that many comparisons, none of them remained statistically significant. And because 466 nm was picked using the whole dataset, the performance estimate is optimistic: when we let the model pick its wavelength inside each cross-validation fold, the full-macula AUC dropped from 0.69 to 0.52 (and in the inferior half only from 0.72 to 0.68). Encouragingly, 466 nm was still the wavelength chosen most often (in 97.5% of folds for the inferior half).</p>
+      <p>Also, texture is an optical measure, not a chemical one: these data don't tell us that we are literally seeing amyloid in the retina. Tau, inflammation, or other tissue changes could contribute as well.</p>
+    </div>
+    <p class="muted">We also checked how stable the measurement is. Repeating the scan with different flash settings on the same day gave very consistent values (ICC up to 0.88). Across visits months apart, repeatability was moderate (ICC 0.60 for the full macula).</p>
+
+    <div class="finding" style="--c: var(--oct)"><span class="num">2</span><h3>The ganglion cell layer carries a structural signal, spread across the macula</h3></div>
+    <p>On OCT, the overall <b>pattern</b> of GC-IPL thickness across the nine macular regions was associated with amyloid status (p = 0.009, adjusted for age and sex). The nerve fibre layer (RNFL) was not. Interestingly, no single region differed significantly on its own: the information lies in the spatial pattern, not in one spot.</p>
+    <p>A model using all nine GC-IPL regions reached an AUC of 0.73. And, like HSI, the <b>inferior</b> regions were far more informative than the superior ones (AUC 0.71 vs. 0.45). Two very different techniques pointing at the same part of the retina is intriguing. Since both were measured in the same people, though, it is a convergence worth following up, not an independent replication.</p>
+
+    <div class="finding" style="--c: var(--cfp)"><span class="num">3</span><h3>Large retinal vessels added little</h3></div>
+    <p>Of 24 vascular measures, only arteriole width (slightly wider in Aβ+) and the number of venous endpoints showed nominal differences, and neither survived correction for multiple comparisons. Arteriole and venule width together gave an AUC of 0.68, and adding them to the best model did not help (0.84 → 0.81).</p>
+    <p>That doesn't mean blood vessels are irrelevant in Alzheimer's. Static vessel width on a photo is a coarse measure, and vessel width is also strongly affected by blood pressure, diabetes and heart disease. Changes at the level of the tiniest capillaries (measurable with OCT angiography) or in how vessels <i>react</i> (dynamic vessel analysis, now being collected in RetAD) may be more sensitive.</p>
+
+    <div class="finding" style="--c: var(--accent)"><span class="num">4</span><h3>Combining texture and structure gave the best performance</h3></div>
+    <p>The strongest model combined HSI texture with the nine OCT GC-IPL regions. How to read the numbers:</p>
+  </div>
+  <div class="wide" style="max-width: 792px">
+    <div class="metric-row">
+      <div class="metric"><b>0.84</b><span><b>AUC</b> (95% CI 0.67–0.97). The chance that a random Aβ+ person gets a higher risk score than a random Aβ− person. 0.5 is a coin flip, 1.0 is perfect.</span></div>
+      <div class="metric"><b>14 / 17</b><span><b>Sensitivity 0.82.</b> Amyloid-positive participants correctly flagged.</span></div>
+      <div class="metric"><b>18 / 23</b><span><b>Specificity 0.78.</b> Amyloid-negative participants correctly cleared.</span></div>
+    </div>
+  </div>
+  <div class="wide">
+    <figure>
+      <div class="paper"><img src="/images/retad/classification-auc.png" alt="AUC with 95% confidence intervals: GLCM COR 0.69, GC-IPL 0.73, VBMs 0.68; GLCM COR + GC-IPL 0.84, GLCM COR + VBMs 0.70, VBMs + GC-IPL 0.75, all three 0.81" loading="lazy"></div>
+      <figcaption class="caption"><b>Classification performance per feature set</b>, with 95% bootstrap confidence intervals. Top: one modality at a time. Bottom: combinations. HSI texture (GLCM COR) plus OCT (GC-IPL) scored highest.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="caveat">
+      <b class="h">How sure are we?</b>
+      <p>Every model did better than chance (tested by shuffling the labels 1,000 times; p = 0.001 for HSI + OCT). But the confidence intervals are wide, as expected with 40 people. The gain of the combination over HSI alone (+0.15, 95% CI −0.01 to 0.30) or over OCT alone (+0.11, −0.04 to 0.25) was <b>not statistically significant</b>. The right reading is: the two techniques seem to carry <i>complementary</i> information, which is a hypothesis worth testing at scale, not yet proof that combining them is better.</p>
+    </div>
+
+    <div class="finding" style="--c: var(--pos)"><span class="num">5</span><h3>Across disease stages, the texture signal dips and then rises again</h3></div>
+    <p>To look beyond the early stage, we added 39 participants from our earlier study (22 cognitively normal, 17 with Alzheimer's dementia), imaged with the same camera. Texture was lower in the early amyloid-positive group than in controls, but in people with <b>dementia it was back up</b>, not different from controls.</p>
+  </div>
+  <div class="wide" style="max-width: 860px">
+    <figure>
+      <div class="paper"><img src="/images/retad/stages.png" alt="Box plots of GLCM correlation at 466 nm for cognitively normal controls (n=45), early amyloid-positive CN/MCI (n=17) and Alzheimer's dementia (n=17)" loading="lazy"></div>
+      <figcaption class="caption"><b>Retinal texture across three groups.</b> Lower in early amyloid-positive participants than in controls (p = 0.015); in the dementia group values were higher again and not significantly different from controls (p = 0.218).</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <p>A similar "strongest in the middle" pattern was reported in an earlier hyperspectral study, whose authors suggested that small, soluble amyloid clusters early in the disease may affect light differently from the larger, fibrillar aggregates found later. That could explain our pattern too, but it remains a hypothesis. It also has a practical implication: a marker that goes down and then back up cannot simply be read as "lower is worse".</p>
+    <div class="caveat">
+      <b class="h">How sure are we?</b>
+      <p>These are different people at different stages, not the same people followed over time, and the dementia group came from a separate cohort. Controls from both cohorts had similar values (p = 0.503), which is somewhat reassuring, but stage and cohort remain partly entangled. Only longitudinal follow-up can show whether this is how the retina actually changes over the course of the disease.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY COMBINE ============ -->
+<section id="framework">
+  <div class="wrap">
+    <p class="kicker">The bigger picture</p>
+    <h2>Why combining views makes biological sense</h2>
+    <p>Researchers classify Alzheimer's biomarkers by the process they reflect: <b>A</b>myloid, <b>T</b>au, <b>N</b>eurodegeneration, and <b>V</b>ascular damage as a common co-pathology. Our three retinal views loosely line up with that framework.</p>
+  </div>
+  <div class="wide" style="max-width: 792px">
+    <div class="atvn">
+      <div style="--c: var(--hsi)"><div class="l">A</div><div class="w">Amyloid</div><div class="r">HSI texture was associated with brain amyloid status</div></div>
+      <div style="--c: var(--hsi)"><div class="l">T</div><div class="w">Tau</div><div class="r">Other work suggests hyperspectral signals can also be sensitive to tau</div></div>
+      <div style="--c: var(--oct)"><div class="l">N</div><div class="w">Neurodegeneration</div><div class="r">OCT GC-IPL thickness reflects loss of retinal neurons</div></div>
+      <div style="--c: var(--cfp)"><div class="l">V</div><div class="w">Vascular</div><div class="r">Fundus vessel measures capture (part of) retinal vascular health</div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p>This offers a plausible explanation for why HSI and OCT might complement each other: they may sample different disease processes. But it is a way of framing hypotheses. The retinal measures do not directly quantify the corresponding processes in the brain, and future studies need to test these links against established brain and blood biomarkers.</p>
+  </div>
+</section>
+
+<!-- ============ LIMITS ============ -->
+<section id="limits">
+  <div class="wrap">
+    <p class="kicker">Reading this responsibly</p>
+    <h2>What this study does <i>not</i> show</h2>
+    <ul class="limits">
+      <li><b>It is small.</b> 40 participants, 17 amyloid-positive. That means wide confidence intervals and a real risk that the models are tuned to this particular group.</li>
+      <li><b>It has not been externally validated.</b> The key HSI feature was discovered in the same data it was tested on, and no independent cohort with PET-confirmed amyloid status was available.</li>
+      <li><b>It doesn't test specificity.</b> People with glaucoma or other neurological diseases were excluded, so we don't yet know whether these signals are specific to Alzheimer's.</li>
+      <li><b>It is not a diagnostic test.</b> The results are hypothesis-generating estimates of what might be possible, not measures of clinical performance.</li>
+    </ul>
+    <p>What it does provide: preliminary evidence that the retina carries measurable signals linked to brain amyloid, a concrete candidate feature (466 nm texture), a candidate region (the inferior macula), and a reason to pursue multimodal retinal imaging in larger, longitudinal cohorts.</p>
+  </div>
+</section>
+
+<!-- ============ TAKEAWAYS ============ -->
+<section id="takeaways">
+  <div class="wrap">
+    <p class="kicker">If you read nothing else</p>
+    <h2>Five take-aways</h2>
+    <ol class="take">
+      <li><b>The retina shows signals linked to brain amyloid, even before dementia.</b><span>In preclinical and prodromal Alzheimer's, confirmed by PET.</span></li>
+      <li><b>Texture beats brightness.</b><span>How light is arranged across the retina was more informative than how much light is reflected, with blue light (466 nm) standing out.</span></li>
+      <li><b>For OCT, the spatial pattern matters.</b><span>No single region differed on its own, but the pattern of GC-IPL thickness across the macula did. Both HSI and OCT pointed to the lower half of the macula.</span></li>
+      <li><b>HSI and OCT look complementary.</b><span>Together they reached AUC 0.84, the best of all combinations, though not yet significantly better than either alone.</span></li>
+      <li><b>Next: bigger, longer, prespecified.</b><span>Larger longitudinal cohorts with the wavelength and region fixed in advance, plus capillary-level and functional vessel imaging, which is part of the ongoing RetAD study.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CITE ============ -->
+<section id="cite">
+  <div class="wrap">
+    <p class="kicker">Cite</p>
+    <h2>BibTeX</h2>
+<pre class="bib" id="bib">@article{ghesquiere2026multimodal,
+  author  = {Ghesquiere, Michiel and Christinaki, Eirini and Lemmens, Sophie and
+             Van Eijgen, Jan and Beeckmans, Lennert and Ghinis, Achilleas and
+             Jacobs, Thomas and Van Keer, Karel and Wehbi, Zahi and De Groef, Lies and
+             Dahdouh-Guebas, Yasmin and Charle, Wouter and Vande Casteele, Thomas and
+             Vandenbulcke, Mathieu and Vanderlinden, Greet and Van Laere, Koen and
+             Schaeverbeke, Jolien and Vandenberghe, Rik and Ceccarini, Jenny and
+             De Vos, Maarten and Stalmans, Ingeborg},
+  title   = {Multimodal Retinal Imaging for the Detection of Early {Alzheimer's} Disease:
+             Combining Biochemical, Structural, and Vascular Biomarkers},
+  journal = {Bioengineering},
+  year    = {2026},
+  volume  = {13},
+  number  = {9},
+  pages   = {1041},
+  doi     = {10.3390/bioengineering13091041}
+}</pre>
+    <button class="btn copy" id="copybib" type="button">Copy BibTeX</button>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    This page is a plain-language summary of the published article. For full methods, statistics and supplementary analyses, see the <a href="https://www.mdpi.com/2306-5354/13/9/1041">paper</a>. Figures adapted from the article (CC BY 4.0). Data collection was supported by the Research Foundation Flanders (FWO, G093218N) and KU Leuven internal C2 funding (C24-17-063). Thanks to all RetAD participants.
+    <br><a href="/projects/">← Back to projects</a> · <a href="/">michielghesquiere.github.io</a>
+  </div>
+</footer>
+
+<script>
+// Cohort dots
+(function () {
+  const neg = document.getElementById('dots-neg');
+  const pos = document.getElementById('dots-pos');
+  for (let i = 0; i < 23; i++) neg.appendChild(document.createElement('i'));
+  for (let i = 0; i < 17; i++) {
+    const d = document.createElement('i');
+    if (i >= 10) d.className = 'mci';
+    pos.appendChild(d);
+  }
+})();
+
+// Texture demo: smoothed noise, quantised to gray levels, GLCM correlation at distance 1 over 0/45/90/135 degrees
+(function () {
+  const N = 96, LEVELS = 16;
+  const canvas = document.getElementById('tex');
+  const ctx = canvas.getContext('2d');
+  const slider = document.getElementById('smooth');
+  const out = document.getElementById('corr');
+
+  let seed = 7;
+  const rand = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const base = new Float32Array(N * N).map(() => rand());
+
+  function blur(src, r) {
+    if (r < 0.01) return src.slice();
+    const sigma = r, rad = Math.ceil(sigma * 3), k = [];
+    let s = 0;
+    for (let i = -rad; i <= rad; i++) { const v = Math.exp(-(i * i) / (2 * sigma * sigma)); k.push(v); s += v; }
+    for (let i = 0; i < k.length; i++) k[i] /= s;
+    const tmp = new Float32Array(N * N), dst = new Float32Array(N * N);
+    const wrap = (i) => (i + N) % N;
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      let a = 0; for (let i = -rad; i <= rad; i++) a += src[y * N + wrap(x + i)] * k[i + rad]; tmp[y * N + x] = a;
+    }
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      let a = 0; for (let i = -rad; i <= rad; i++) a += tmp[wrap(y + i) * N + x] * k[i + rad]; dst[y * N + x] = a;
+    }
+    return dst;
+  }
+
+  function glcmCorrelation(q) {
+    const offs = [[1, 0], [1, -1], [0, -1], [-1, -1]];
+    let total = 0;
+    for (const [dx, dy] of offs) {
+      const P = new Float64Array(LEVELS * LEVELS); let cnt = 0;
+      for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+        const x2 = x + dx, y2 = y + dy;
+        if (x2 < 0 || x2 >= N || y2 < 0 || y2 >= N) continue;
+        const a = q[y * N + x], b = q[y2 * N + x2];
+        P[a * LEVELS + b]++; P[b * LEVELS + a]++; cnt += 2;
+      }
+      let mi = 0, mj = 0;
+      for (let i = 0; i < LEVELS; i++) for (let j = 0; j < LEVELS; j++) { const p = P[i * LEVELS + j] / cnt; mi += i * p; mj += j * p; }
+      let vi = 0, vj = 0, cov = 0;
+      for (let i = 0; i < LEVELS; i++) for (let j = 0; j < LEVELS; j++) {
+        const p = P[i * LEVELS + j] / cnt; vi += (i - mi) ** 2 * p; vj += (j - mj) ** 2 * p; cov += (i - mi) * (j - mj) * p;
+      }
+      total += cov / Math.sqrt(vi * vj);
+    }
+    return total / offs.length;
+  }
+
+  function render() {
+    const t = slider.value / 100;
+    const img = blur(base, t * t * 6);
+    let lo = Infinity, hi = -Infinity;
+    for (const v of img) { if (v < lo) lo = v; if (v > hi) hi = v; }
+    const q = new Uint8Array(N * N), data = ctx.createImageData(N, N);
+    for (let i = 0; i < N * N; i++) {
+      const n = (img[i] - lo) / (hi - lo || 1);
+      q[i] = Math.min(LEVELS - 1, Math.floor(n * LEVELS));
+      const g = Math.round(40 + n * 190);
+      data.data[i * 4] = g; data.data[i * 4 + 1] = Math.round(g * 0.93); data.data[i * 4 + 2] = Math.round(g * 0.78); data.data[i * 4 + 3] = 255;
+    }
+    ctx.putImageData(data, 0, 0);
+    out.textContent = glcmCorrelation(q).toFixed(2);
+  }
+  slider.addEventListener('input', render);
+  render();
+})();
+
+// Copy BibTeX
+document.getElementById('copybib').addEventListener('click', function () {
+  const b = this;
+  navigator.clipboard.writeText(document.getElementById('bib').textContent).then(function () {
+    b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy BibTeX'; }, 1500);
+  });
+});
+</script>
+</body>
+</html>
